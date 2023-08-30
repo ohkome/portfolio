@@ -1,0 +1,26 @@
+.grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50vh 50vh;
+}
+
+.header {
+    
+}
+
+.img {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+}
