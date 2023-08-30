@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 //コンポーネント
-import Header from './compornents/Header/Header'
+import Top from './compornents/Top/Top'
 
 export default function Home() {
   return (
     <main className={styles.main}>
-        <Header />
+      <Top />
     </main>
   )
 }
