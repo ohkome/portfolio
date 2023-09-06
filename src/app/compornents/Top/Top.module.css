@@ -1,26 +1,95 @@
+/* 共通要素 */
+.link {
+    display: inline-block;
+}
+
+/* レイアウト */
 .grid {
+    width: 85%;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1.5fr 1fr;
     grid-template-rows: 50vh 50vh;
+    height: 100vh;
 }
 
-.header {
-    
+/* ヘッダー */
+.nav {
+    width: clamp(8rem, 40vw, 12rem);
+    margin-left: min(31vw, 200px);/* ロゴ分の幅分 */
+    text-align: center;
 }
 
-.img {
+.flex {
+    background-color: #ccc;
+}
+
+.item {
+    margin: 0.5rem 0;
+    padding: 1vh;
+    font-size: clamp(0.875rem, 5vw, 2rem);
+}
+
+.link:hover {
+    color: beige;
+}
+
+/* 画像 */
+.img { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
+/* タイトル */
 .title {
     grid-row-start: 2;
     grid-row-end: 3;
-    text-align: center;
+}
+
+
+/*-------------
+    モバイル 
+---------------*/
+@media (max-width: 900px) {
+    /* レイアウト */
+    .grid {
+        width: 95%;
+        grid-template-columns: 100%;
+        grid-template-rows: auto; /* 高さを自動調整 */
+    }
+
+    /* ヘッダー */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav {
+        width: 70%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 10%;
+        background-color: transparent;
+    }
+    /* 画像、タイトル */
+    .img, 
+    .title {
+        grid-row-start: auto; /* 自動位置設定 */
+        grid-row-end: auto;
+        grid-column-start: auto;
+        grid-column-end: auto;
+    }
 }

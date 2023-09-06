@@ -109,3 +109,10 @@ ul {
     color-scheme: dark;
   }
 }
+
+
+.wrapper {
+  width: min(1020px, 100%);
+  margin: 0 auto;
+  padding-top: min(1rem, 1%);
+}
