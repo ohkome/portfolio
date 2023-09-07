@@ -45,7 +45,7 @@ const Top = () => {
           <Link href="/" className={styles.link} >
             <Image 
             src='/logo.svg' 
-            alt="me" 
+            alt="mk" 
             priority
             width={100}
             height={50}
@@ -70,14 +70,14 @@ const Top = () => {
       </header>
       
       {/* mainvisual */}
-      <div className={styles.layout}>
+      <div className={styles.mainvisual_flex}>
         <div className={styles.img}>
           <Image 
           src='/photo.png' 
-          alt="me" 
-          priority
-          width={200}
-          height={300}
+          alt='me' 
+          fill
+          sizes='(max-width: 768px) 50%, 100%'
+          className={styles.imgItem}
           />
         </div>
 
@@ -87,10 +87,11 @@ const Top = () => {
             Hi! I am Minori Komeichi.<br />
               Welcome to My Portfolio Website.
           </p>
-          <div className={styles.link}>
+          
             {mainvisualLink.map((item) =>{
               return(
-                <Link key={item.alt} href={item.href}>
+              <div key={item.alt} className={styles.link}>
+                <Link href={item.href}>
                   <Image 
                   src={item.src} 
                   alt={item.alt} 
@@ -99,9 +100,9 @@ const Top = () => {
                   height={30} 
                   />
                 </Link>
+              </div>
               );
             })}
-          </div>
         </div>
       </div>
     </>

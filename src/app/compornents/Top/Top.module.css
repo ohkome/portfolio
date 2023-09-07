@@ -1,6 +1,6 @@
 /* 共通要素 */
 .link {
-    display: block;
+    display: inline-block;
 }
 
 .link:hover {
@@ -35,27 +35,31 @@
 }
 
 /* メインビジュアルのレイアウト */
-.layout {
+.mainvisual_flex {
     height: 90vh;
 
     display: flex;
     flex-direction: row-reverse;
-}
+} 
 
 /* 画像 */
 .img {
-    width: 40%;
+    flex: 1;
     padding-top: 5vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;/* 画像が浮くのを防ぐ */
+}
+
+.imgItem {
+    max-width: 100%;
+    object-fit: contain;
 }
 
 /* タイトル */
 .title {
-    width: 60%;
-    padding-top: 25vh;
+    flex: 1;
+    padding-top: min(25vh, 20vw);
+    background-color: transparent;
 }
 
 .text {
@@ -65,6 +69,9 @@
 .icon {
     margin: 10px;
 }
+
+
+
 
 /*-------------
     モバイル 
