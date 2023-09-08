@@ -8,6 +8,8 @@
     opacity: 0.5;
 }
 
+
+
 /* ヘッダー */
 .header {
     max-width: 100%;
@@ -23,7 +25,7 @@
     text-align: center;
 }
 
-.flex {
+.nav_flex {
     display: flex;
     justify-content: flex-end;
 }
@@ -34,12 +36,16 @@
     font-size: clamp(0.75rem, 5vw, 2rem);
 }
 
+
+
 /* メインビジュアルのレイアウト */
 .mainvisual_flex {
     height: 90vh;
 
     display: flex;
     flex-direction: row-reverse;
+
+    position: relative;/* scrolldown用 */
 } 
 
 /* 画像 */
@@ -62,15 +68,95 @@
     background-color: transparent;
 }
 
-.text {
-    font-size: clamp(0.5rem, 5vw, 1.5rem);
-}
-
 .icon {
     margin: 10px;
+    animation: icon-up 2s forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+@keyframes icon-up {
+    0% {
+        opacity: 0;
+        /* transform: translateY(30px); */
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+/* スクロールアニメーション */
+.scrolldown {
+    margin: 0;
+    width: 2px;
+    height: 10vh;
+    background-color: #000;
+    position: relative;
+    animation: scrolldown-bar 3.5s ease-in-out infinite;
 
+    position: absolute;
+    top: 80%;
+    left: 35%;
+}
+.scroll_ball {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #000;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    animation: scrolldown-ball 3.5s ease-in-out infinite;
+}
+.scrolldown::before {
+    content: "scroll→";
+
+    position: absolute;
+    top: 0;
+    left: 0.1em;
+    transform: rotate(90deg) translate(-60%);
+    z-index: 1;
+    animation: scrolldown-ball 3.5s ease-in-out infinite;
+}
+
+@keyframes scrolldown-bar {
+    0% {
+        opacity: 0.7;
+        width: 2px;
+        height: 0;
+    }
+    60% {
+        opacity: 1;
+        width: 2px;
+        height: 10vh;
+    }
+    80% {
+        opacity: 1;
+        width: 2px;
+        height: 10vh;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes scrolldown-ball {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        top: 90%;
+        opacity: 1;
+    }
+}
 
 
 /*-------------
@@ -84,10 +170,12 @@
 @media screen and (max-width:600px) {
     .header {
         height: 5vh;
+        margin-top: 1vh;
     }
     
     .logo {
-        width: 60%;
+        width: 30%;
+        height: auto;
         flex-shrink: 1;
     }
 }

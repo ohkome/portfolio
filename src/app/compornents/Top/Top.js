@@ -46,7 +46,7 @@ const Top = () => {
             <Image 
             src='/logo.svg' 
             alt="mk" 
-            priority
+            priority={false}
             width={100}
             height={50}
             className={styles.logo}
@@ -54,10 +54,9 @@ const Top = () => {
           </Link>
         </h1>
         
-
         {/* navigationMenu */}
         <nav className={styles.nav}>
-          <ul className={styles.flex}>
+          <ul className={styles.nav_flex}>
             {navigationMenu.map((item)=>{
               return(
                 <li key={item.label} className={styles.item}>
@@ -74,7 +73,8 @@ const Top = () => {
         <div className={styles.img}>
           <Image 
           src='/photo.png' 
-          alt='me' 
+          alt='me'
+          priority={true} 
           fill
           sizes='(max-width: 768px) 50%, 100%'
           className={styles.imgItem}
@@ -82,29 +82,33 @@ const Top = () => {
         </div>
 
         <div className={styles.title}>
-          <Title />
-          <p className={styles.text}>
-            Hi! I am Minori Komeichi.<br />
-              Welcome to My Portfolio Website.
-          </p>
+          <Title 
+            intro='Hi! I am Minori Komeichi.' 
+            message='Welcome to My Portfolio Website.'
+          />
           
-            {mainvisualLink.map((item) =>{
-              return(
-              <div key={item.alt} className={styles.link}>
-                <Link href={item.href}>
-                  <Image 
-                  src={item.src} 
-                  alt={item.alt} 
-                  className={styles.icon} 
-                  width={30} 
-                  height={30} 
-                  />
-                </Link>
-              </div>
-              );
-            })}
+          {mainvisualLink.map((item) =>{
+            return(
+            <div key={item.alt} className={styles.link}>
+              <Link href={item.href}>
+                <Image 
+                src={item.src} 
+                alt={item.alt} 
+                className={styles.icon} 
+                width={30} 
+                height={30} 
+                />
+              </Link>
+            </div>
+            );
+          })}
         </div>
       </div>
+
+      <div className={styles.scrolldown}>
+        <span className={styles.scroll_ball}></span>
+      </div>
+
     </>
   )
 }
