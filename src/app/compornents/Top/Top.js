@@ -74,7 +74,7 @@ const Top = () => {
           <Image 
           src='/photo.png' 
           alt='me'
-          priority={true} 
+          // priority={true} 
           fill
           sizes='(max-width: 768px) 50%, 100%'
           className={styles.imgItem}
