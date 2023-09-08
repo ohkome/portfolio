@@ -1,0 +1,81 @@
+/* ----------------
+svgアニメーション
+---------------- */
+.logoCover {
+    position: relative;
+}
+.logoFill {
+    position: absolute;
+    top:0;
+    left:0;
+}
+.logoStroke {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.str {
+    /* うえ */
+    fill: transparent;
+    stroke-miterlimit: 1;
+    stroke-width: 1;
+
+    animation: b 1s forwards;
+}
+.fill {
+    /* した */
+    fill: transparent;
+    stroke: transparent;
+    stroke-miterlimit: 1;
+    stroke-width: 1;
+    /* opacity: 0; */
+
+    animation: a 1s forwards;
+}
+
+/* .str.action {
+    animation: b 1s forwards;
+}
+.fill.action {
+    opacity: 1;
+    animation: a 1s forwards;
+} */
+@keyframes b {
+    0% {
+        stroke: transparent;
+        stroke-dashoffset: 200px;
+        stroke-dasharray: 200px;
+    }
+    100% {
+        stroke: #000;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 200px;
+    }
+}
+@keyframes a {
+    0% {
+        fill: transparent;
+        -webkit-clip-path: inset(0 100% 0 0);
+    clip-path: inset(0 100% 0 0);
+    }
+    80% {
+        fill:#000;
+        -webkit-clip-path: inset(0 100% 0 0);
+    clip-path: inset(0 100% 0 0);
+    }
+    100% {
+        fill: #000;
+        -webkit-clip-path: inset(0);
+        clip-path: inset(0)
+    }
+}
+
+
+/* ----------
+textサイズ 
+------------*/
+.text {
+    font-size: clamp(0.25rem, 3vw, 1.5rem);
+}
