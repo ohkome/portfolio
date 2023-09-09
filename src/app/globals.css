@@ -112,8 +112,4 @@ ul {
 } */
 
 
-.wrapper {
-  width: min(1020px, 90%);
-  margin: 0 auto;
-  padding-top: min(1rem, 1%);
-}
+

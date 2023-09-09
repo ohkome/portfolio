@@ -1,0 +1,136 @@
+/* 共通要素 */
+.topAbout {
+    background-color: #9E9E9E;
+}
+
+.wrapper {
+    width: min(1020px, 90%);
+    margin: 0 auto;
+    padding: clamp(5rem, 20vh, 50rem) clamp(3rem, 5vw, 10rem);
+    /* padding: clamp(3rem, 5vw, 10rem); */
+    /* レイアウトの調整 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* title */
+.title {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* text */
+.text {
+    width: 50%;
+    margin: 0 auto;
+    font-size: clamp(0.875rem, 1.5vw, 1.25rem)
+}
+
+.name {
+    margin-bottom: 1.5rem;
+    font-size: clamp(0.75rem, 150%, 2rem);
+    font-weight: normal;
+}
+
+.name_en {
+    display: block;
+    font-size: clamp(0.3rem, 120%, 1rem);
+}
+
+.name_ja {
+    display: block;
+}
+
+.summary {
+    text-align: justify;
+}
+
+.list_title {
+    margin-top: 1rem;
+    font-weight: normal;
+}
+
+.list_title::before,
+.list_title::after {
+    content: "～";
+}
+
+.dl_layout {
+    display: flex;
+    width: 100%;
+    padding-left: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.list_item_title {
+    width: 3.5em;
+    white-space: nowrap;
+}
+
+.list_item {
+    width: calc(100% - 3.5em);
+    padding-left: 1rem;
+}
+
+
+.ul_layout {
+    padding-left: 1rem;
+}
+
+
+
+/*-------------
+    モバイル 
+---------------*/
+@media (max-width: 1000px) {
+    .ul_list_layout {
+        font-size: 65%;
+    }
+}
+
+@media (max-width: 780px) {
+    /* 共通要素 */
+    .wrapper {
+        flex-direction: column;
+    }
+
+    /* text */
+    .text {
+        width: min(400px, 100%);
+        margin-top: 10vh;
+        text-align: center;
+        /* font-size: clamp(0.875rem, 1.5vw, 1.25rem) */
+    }
+
+    .summary {
+        text-align: center;
+        text-wrap: balance;
+    }
+
+    .list_title {
+        margin-top: 2em;
+        margin-bottom: 0.25em;
+    }
+
+    .dl_layout {
+        padding-left: 0; /* 初期化 */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list_item {
+        margin-bottom: 1em;
+        padding-left: 0; /* 初期化 */
+    }
+}
+
+@media screen and (max-width:450px) {
+    .ul_list_layout {
+        display: block;
+        margin-bottom: 1em;
+    }
+}

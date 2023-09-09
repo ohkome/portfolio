@@ -38,7 +38,7 @@ const mainvisualLink = [
 
 const Top = () => {
   return (
-    <>
+    <div className={styles.wrapper}>
       <header className={styles.header}>
         {/* svg-logo */}
         <h1>
@@ -109,7 +109,7 @@ const Top = () => {
         <span className={styles.scroll_ball}></span>
       </div>
 
-    </>
+    </div>
   )
 }
 
