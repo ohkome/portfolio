@@ -1,0 +1,37 @@
+.title {
+    display: inline-block;
+    text-align: center;
+
+    /* box用の調整 */
+    position: relative;
+    margin-left: clamp(0.3rem, 2vw, 0.75rem);/* box幅 */
+    padding-left: clamp(0.1rem, 1vw, 3rem);
+}
+
+.en {
+    display: block;
+    font-size: clamp(0.75rem, 5vw, 2rem);
+}
+
+.ja {
+    display: block;
+    font-size: clamp(0.3rem, 2.5vw, 1rem);
+}
+
+/* 装飾 */
+.title::before {
+    content: "";
+    display: block;
+    width: clamp(0.3rem, 2vw, 0.75rem);;
+    height: clamp(0.75rem, 5vw, 2rem);
+    position:absolute;
+    top: 20%;
+    right: 100%;
+    background-color: var(--box-color);
+    
+}
+
+.ja::before,
+.ja::after {
+    content: "～";
+}
