@@ -9,4 +9,11 @@
 .flow {
     position: absolute;
     top: 100vh;
+    /* 操作性の設定 */
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; /* 垂直方向のスクロールスナップを有効にする */
+}
+
+.scrollsnap {
+    scroll-snap-align: start; /* 親要素である .flow に対して効果があります */
 }

@@ -1,0 +1,91 @@
+.scroll_wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative; /* scrll用 */
+    background-color: #444;
+}
+
+.scroll {
+    max-width: 100vw;
+    display: flex;
+    overflow: hidden;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.listLeft_fir {
+    display: flex;
+    list-style: none;
+    margin-bottom: 50vh;
+    padding: 0;
+    animation: left-fir 20s -10s infinite linear both;
+}
+
+.listLeft_sec {
+    display: flex;
+    list-style: none;
+    margin-bottom: 50vh;
+    padding: 0;
+    animation: left-sec 20s infinite linear both;
+}
+.listRight_fir {
+    display: flex;
+    list-style: none;
+    margin-top: 50vh;
+    padding: 0;
+    animation: right-fir 20s -10s infinite linear both;
+}
+.listRight_sec {
+    display: flex;
+    list-style: none;
+    margin-top: 50vh;
+    padding: 0;
+    animation: right-sec 20s infinite linear both;
+}
+.item {
+    width: 100vw;
+    height: calc(100vw / 2 * 0.75);
+    position: relative;/*Imageコンポーネント用*/
+}
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #555;
+}
+
+
+@keyframes left-fir {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+@keyframes left-sec {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-200%);
+    }
+}
+@keyframes right-fir {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+@keyframes right-sec {
+    from {
+        transform: translateX(-200%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

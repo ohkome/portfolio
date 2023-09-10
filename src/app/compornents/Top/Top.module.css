@@ -108,6 +108,7 @@
     position: absolute;
     top: 80%;
     left: 35%;
+    z-index: 1;/* お試し　がくつき防止*/
 }
 .scroll_ball {
     width: 1rem;
