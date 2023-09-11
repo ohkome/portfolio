@@ -86,7 +86,7 @@ const TopWorks = () => {
             <ul className={styles.layout_grid}>
               {worksDesign.map((item) => {
                 return(
-                  <li className={styles.works_item}>
+                  <li key={item.index} className={styles.works_item}>
                     <Link href={item.href}>
                       <Image 
                       src={item.src} 
@@ -108,7 +108,7 @@ const TopWorks = () => {
             <ul className={styles.layout_grid}>
               {worksWeb.map((item) => {
                 return(
-                  <li className={styles.works_item}>
+                  <li key={item.index} className={styles.works_item}>
                     <Link href={item.href}>
                       <Image 
                       src={item.src} 
