@@ -83,7 +83,7 @@ html,
 body {
   min-width: 300px;/* レイアウト崩れ防止 */
   max-width: 100%;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 /* body {

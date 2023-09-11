@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-    width: min(1020px, 90%);
+    width: max(1020px, 95%);
     margin: 0 auto;
     padding: clamp(5rem, 8vw, 20rem) clamp(3rem, 5vw, 10rem);
 }
@@ -18,13 +18,72 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
 }
 
-/* レイアウト */
-.layout {
+/* 作品部分 */
+.layout_flex {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reverce {
+    flex-direction: row-reverse;
+}
+
+.works_tag {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(0.75rem, 5vw, 2rem);
+}
+
+.layout_grid {
+    width: 65%;
+    height: 80vh;
+    margin-top:10vh;
+    margin-bottom: 10vh;
+
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1,5fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    background-color: antiquewhite;
 }
 
+.works_item {
+    width: 100%;
+    height: calc(100% * 0.75);
+    background-color: aqua;
+    position: relative; /* image用 */
+}
+
+.works_item:nth-child(3n) {
+    width: 50%;
+    grid-column-start: 1;
+    grid-column-end: 3; 
+    justify-self: center;
+}
+
+.works_img {
+    width: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 1020px) {
+    .layout_flex {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .layout_grid {
+        width: 65%;
+        height: 100vh;
+        margin-top:10vh;
+        margin-bottom: 10vh;
+    }
+}
