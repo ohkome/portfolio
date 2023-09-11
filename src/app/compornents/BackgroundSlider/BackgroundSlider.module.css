@@ -6,7 +6,7 @@
 }
 
 .scroll {
-    max-width: 100vw;
+    max-width: 100%;
     display: flex;
     overflow: hidden;
 
@@ -15,34 +15,28 @@
     transform: translateY(-50%);
 }
 
-.listLeft_fir {
+.list {
     display: flex;
     list-style: none;
-    margin-bottom: 50vh;
     padding: 0;
-    animation: left-fir 20s -10s infinite linear both;
 }
 
-.listLeft_sec {
-    display: flex;
-    list-style: none;
+.left_fir {
     margin-bottom: 50vh;
-    padding: 0;
-    animation: left-sec 20s infinite linear both;
+    animation: left-fir 40s -20s infinite linear both;
 }
-.listRight_fir {
-    display: flex;
-    list-style: none;
-    margin-top: 50vh;
-    padding: 0;
-    animation: right-fir 20s -10s infinite linear both;
+
+.left_sec {
+    margin-bottom: 50vh;
+    animation: left-sec 40s infinite linear both;
 }
-.listRight_sec {
-    display: flex;
-    list-style: none;
+.right_fir {
     margin-top: 50vh;
-    padding: 0;
-    animation: right-sec 20s infinite linear both;
+    animation: right-fir 40s -20s infinite linear both;
+}
+.right_sec {
+    margin-top: 50vh;
+    animation: right-sec 40s infinite linear both;
 }
 .item {
     width: 100vw;

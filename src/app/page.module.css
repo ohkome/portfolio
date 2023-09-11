@@ -7,6 +7,7 @@
 }
 
 .flow {
+    width: 100%;
     position: absolute;
     top: 100vh;
     /* 操作性の設定 */

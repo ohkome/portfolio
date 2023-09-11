@@ -6,7 +6,7 @@ const BackgroundSlider = () => {
     return(
         <div className={styles.scroll_wrapper}>
             <div className={styles.scroll}>
-                <ul className={styles.listLeft_fir}>
+                <ul className={`${styles.list} ${styles.left_fir}`}>
                     <li className={styles.item}>
                         <Image 
                         src= '/mosya.jpg'
@@ -17,7 +17,7 @@ const BackgroundSlider = () => {
                         />
                     </li>
                 </ul>
-                <ul className={styles.listLeft_sec}>
+                <ul className={`${styles.list} ${styles.left_sec}`}>
                     <li className={styles.item}>
                         <Image 
                         src='/mosya.jpg'
@@ -30,7 +30,7 @@ const BackgroundSlider = () => {
                 </ul>
             </div>
             <div className={styles.scroll}>
-                <ul className={styles.listRight_fir}>
+                <ul className={`${styles.list} ${styles.right_fir}`}>
                     <li className={styles.item}>
                         <Image 
                         src='/mosya.jpg'
@@ -41,7 +41,7 @@ const BackgroundSlider = () => {
                         />
                     </li>
                 </ul>
-                <ul className={styles.listRight_sec}>
+                <ul className={`${styles.list} ${styles.right_sec}`}>
                     <li className={styles.item}>
                         <Image 
                         src='/mosya.jpg'
