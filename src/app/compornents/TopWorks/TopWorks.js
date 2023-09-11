@@ -84,9 +84,9 @@ const TopWorks = () => {
             <h3 className={styles.works_tag}>Design</h3>
 
             <ul className={styles.layout_grid}>
-              {worksDesign.map((item) => {
+              {worksDesign.map((item,index) => {
                 return(
-                  <li key={item.index} className={styles.works_item}>
+                  <li key={index} className={styles.works_item}>
                     <Link href={item.href}>
                       <Image 
                       src={item.src} 
@@ -106,9 +106,9 @@ const TopWorks = () => {
             <h3 className={styles.works_tag}>Web</h3>
 
             <ul className={styles.layout_grid}>
-              {worksWeb.map((item) => {
+              {worksWeb.map((item,index) => {
                 return(
-                  <li key={item.index} className={styles.works_item}>
+                  <li key={index} className={styles.works_item}>
                     <Link href={item.href}>
                       <Image 
                       src={item.src} 

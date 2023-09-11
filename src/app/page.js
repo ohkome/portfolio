@@ -13,9 +13,7 @@ export default function Home() {
       </div>
       <div className={styles.flow}>
         <TopAbout />
-        <div className={styles.scrollsnap}>
-          <TopWorks />
-        </div>
+        <TopWorks />
       </div>
     </main>
   )
