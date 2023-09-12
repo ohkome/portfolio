@@ -5,11 +5,11 @@ import styles from './BackgroundSlider.module.css';
 const BackgroundSlider = () => {
     return(
         <div className={styles.scroll_wrapper}>
-            <div className={styles.scroll}>
+            <div className={`${styles.scroll} ${styles.left}`}>
                 <ul className={`${styles.list} ${styles.left_fir}`}>
                     <li className={styles.item}>
                         <Image 
-                        src= '/mosya.jpg'
+                        src= '/background-left.jpg'
                         alt='design'
                         className={styles.img} 
                         fill 
@@ -20,7 +20,7 @@ const BackgroundSlider = () => {
                 <ul className={`${styles.list} ${styles.left_sec}`}>
                     <li className={styles.item}>
                         <Image 
-                        src='/mosya.jpg'
+                        src='/background-left.jpg'
                         alt='design'
                         className={styles.img} 
                         fill 
@@ -29,11 +29,11 @@ const BackgroundSlider = () => {
                     </li>
                 </ul>
             </div>
-            <div className={styles.scroll}>
+            <div className={`${styles.scroll} ${styles.left}`}>
                 <ul className={`${styles.list} ${styles.right_fir}`}>
                     <li className={styles.item}>
                         <Image 
-                        src='/mosya.jpg'
+                        src='/background-right.jpg'
                         alt='web'
                         className={styles.img} 
                         fill 
@@ -44,7 +44,7 @@ const BackgroundSlider = () => {
                 <ul className={`${styles.list} ${styles.right_sec}`}>
                     <li className={styles.item}>
                         <Image 
-                        src='/mosya.jpg'
+                        src='/background-right.jpg'
                         alt='web' 
                         className={styles.img} 
                         fill 

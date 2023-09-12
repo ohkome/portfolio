@@ -92,7 +92,6 @@ const TopWorks = () => {
                       src={item.src} 
                       alt={item.alt} 
                       fill
-                      sizes='(max-width: 768px) 50%, 100%'
                       className={styles.works_img}
                       />
                     </Link>
@@ -114,7 +113,6 @@ const TopWorks = () => {
                       src={item.src} 
                       alt={item.alt} 
                       fill
-                      sizes='(max-width: 768px) 50%, 100%'
                       className={styles.works_img}
                       />
                     </Link>

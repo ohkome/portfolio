@@ -106,9 +106,8 @@
     animation-delay: 1s;
 
     position: absolute;
-    top: 80%;
-    left: 35%;
-    z-index: 1;/* お試し　がくつき防止*/
+    top: 70%;
+    left: 35%; 
 }
 .scroll_ball {
     width: 1rem;
@@ -174,10 +173,12 @@
 /*-------------
     モバイル 
 ---------------*/
-@media (max-width: 900px) {
-
+@media (max-width: 700px) {
+    .scrolldown {
+        top: 50%;
+        left: 35%;
+    }
 }
-
 
 @media screen and (max-width:600px) {
     .header {

@@ -1,9 +1,10 @@
-.scroll_wrapper {
+/* .scroll_wrapper {→hoverつける
     width: 100%;
     height: 100vh;
     position: relative; /* scrll用 */
-    background-color: #444;
-}
+    /* background-color: #444;
+} */ 
+
 
 .scroll {
     max-width: 100%;
@@ -23,31 +24,39 @@
 
 .left_fir {
     margin-bottom: 50vh;
-    animation: left-fir 40s -20s infinite linear both;
+    animation: left-fir 60s -30s infinite linear both;
 }
 
 .left_sec {
     margin-bottom: 50vh;
-    animation: left-sec 40s infinite linear both;
+    animation: left-sec 60s infinite linear both;
 }
 .right_fir {
     margin-top: 50vh;
-    animation: right-fir 40s -20s infinite linear both;
+    animation: right-fir 60s -30s infinite linear both;
 }
 .right_sec {
     margin-top: 50vh;
-    animation: right-sec 40s infinite linear both;
+    animation: right-sec 60s infinite linear both;
 }
+/* モバイル
+.scroll_wrapper:active .left_fir,
+.scroll_wrapper:active .left_sec,
+.scroll_wrapper:active .right_fir,
+.scroll_wrapper:active .right_sec {
+    animation-play-state: paused;
+} */
+
 .item {
+    max-width: 100%;
     width: 100vw;
+    padding: 0;
     height: calc(100vw / 2 * 0.75);
     position: relative;/*Imageコンポーネント用*/
 }
 .img {
     width: 100%;
-    height: 100%;
     object-fit: contain;
-    background-color: #555;
 }
 
 
