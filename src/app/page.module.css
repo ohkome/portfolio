@@ -13,3 +13,7 @@
     /* 操作性の設定 */
 }
 
+.works {
+    width: min(1020px, 90%);
+    margin: 0 auto;
+}

@@ -70,14 +70,14 @@ const Top = () => {
       
       {/* mainvisual */}
       <div className={styles.mainvisual_flex}>
-        <div className={styles.img}>
+        <div className={styles.img_box}>
           <Image 
           src='/photo.png' 
           alt='me'
           // priority={true} 
           fill
           sizes='(max-width: 768px) 50%, 100%'
-          className={styles.imgItem}
+          className={styles.img}
           />
         </div>
 

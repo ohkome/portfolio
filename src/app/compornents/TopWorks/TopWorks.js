@@ -10,27 +10,27 @@ const TopWorks = () => {
 
   const worksDesign = [
     {
-      src: '/mosya.jpg',
+      src: '/businesscard.jpg',
       alt: '名刺',
       href: '#'
     },
     {
-      src: '/mosya.jpg',
+      src: '/english.jpg',
       alt: 'オンライン英会話のバナー',
       href: ''
     },
     {
-      src: '/mosya.jpg',
+      src: '/pop.jpg',
       alt: '店内ポップ',
       href: ''
     },
     {
-      src: '/mosya.jpg',
+      src: '/shopcard.jpg',
       alt: 'ショップカード',
       href: ''
     },
     {
-      src: '/mosya.jpg',
+      src: '/mothersday.jpg',
       alt: '母の日ポストカード',
       href: ''
     },
@@ -38,17 +38,17 @@ const TopWorks = () => {
 
   const worksWeb = [
     {
-      src: '/mosya.jpg',
+      src: '/himawari.jpg',
       alt: 'LP-高齢者住宅紹介(架空)',
       href: ''
     },
     {
-      src: '/mosya.jpg',
+      src: '/kujira.jpg',
       alt: 'Webサイト-カフェ(架空)-',
       href: ''
     },
     {
-      src: '/mosya.jpg',
+      src: '/tours.jpg',
       alt: 'LP-登山ツアー(架空)',
       href: ''
     },
@@ -68,14 +68,15 @@ const TopWorks = () => {
     <section className={styles.topWorks}>
       <div className={styles.mainvisual}>
         <BackgroundSlider />
-        <div className={styles.topWorks_title}>
+        <div className={styles.title_wrapper}>
           <SectionTitle 
           enText="Works" 
           jaText="作品"
           enMainColor="#000"
           jaColor="#ccc"
           boxColor="#ccc"
-        />
+          className={styles.title}
+          />
         </div>
       </div>
 

@@ -5,7 +5,7 @@ import styles from './BackgroundSlider.module.css';
 const BackgroundSlider = () => {
     return(
         <div className={styles.scroll_wrapper}>
-            <div className={`${styles.scroll} ${styles.left}`}>
+            <div className={styles.scroll}>
                 <ul className={`${styles.list} ${styles.left_fir}`}>
                     <li className={styles.item}>
                         <Image 
@@ -29,7 +29,7 @@ const BackgroundSlider = () => {
                     </li>
                 </ul>
             </div>
-            <div className={`${styles.scroll} ${styles.left}`}>
+            <div className={`${styles.left} ${styles.scroll}`}>
                 <ul className={`${styles.list} ${styles.right_fir}`}>
                     <li className={styles.item}>
                         <Image 
