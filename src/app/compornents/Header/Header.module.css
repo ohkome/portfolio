@@ -4,6 +4,17 @@
     margin: 0 auto;
     align-items: center;
     justify-content: space-between;
+    opacity: 0;
+    animation: header 1s ease-in forwards;
+    animation-delay: 1s;
+}
+@keyframes header {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .h1 {
@@ -12,6 +23,10 @@
 
 .link {
     display: block;
+}
+
+.link:hover {
+    opacity: 0.8;
 }
 
 

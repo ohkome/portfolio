@@ -24,41 +24,6 @@ const mainvisualLink = [
   }
 ]
 
-// function commentText(text) {
-//   const [on, setOn] = useState(false);
-
-//   const commentOn = () => {
-//     setOn(() => {
-//       <p className={styles.on}>{text}</p>
-//       });
-//   }
-//   const commentOff = () => {
-//     setOn(() => {
-//       <p className={styles.off}>{text}</p>
-//       });
-//   }
-  // const commentOn = () => {
-  //   setOn();
-  // }
-
-  // const commentOff = () => {
-  //   setOn(false);
-  // }
-
-  // const commentClassName = isHovered ? 'on' : 'off';
-
-  // return (
-  //   <p 
-  //   className={`styles.${commentClassName}`}
-  //   onMouseEnter={commentOn} 
-  //   onMouseLeave={commentOff}
-  //   >
-  //     {text}
-  //   </p>
-  // )
-
-
-
 const Top = () => {
   return (
     <div className={styles.wrapper}>
@@ -68,11 +33,10 @@ const Top = () => {
           <Image 
           src='/portfolio-test.jpg' 
           alt='me'
-          width={1000}
-          height={600}
+          // width={1000}
+          // height={600}
           priority={true} 
-          // fill
-          sizes='(max-width: 768px) 100vw, 90vw'
+          fill
           className={styles.img}
           />
         </div>
