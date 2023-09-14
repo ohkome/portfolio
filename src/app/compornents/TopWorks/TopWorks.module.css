@@ -59,13 +59,14 @@
 
 .layout_grid {
     width: 65%;
-    height: 80vh;
+    /* height: 60vh; */
+    height: calc(65vw * 0.75);
     margin-top:10vh;
     margin-bottom: 10vh;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 5% 10%;
     align-items: center;
     background-color: antiquewhite;
 }
@@ -97,8 +98,7 @@
     
     .layout_grid {
         max-width: 100%;
-        height: 100vh;
+        grid-gap: 1% 5%;
         margin:10vh auto;
-        grid-gap: 0.5rem;
     }
 }

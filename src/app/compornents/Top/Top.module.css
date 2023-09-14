@@ -2,11 +2,11 @@
 .wrapper {
     width: min(1020px, 90%);
     margin: 0 auto;
-    padding-top: min(1rem, 1%);
 }
 
 .link {
     display: inline-block;
+    
 }
 
 .link:hover {
@@ -14,69 +14,49 @@
     opacity: 0.5;
 }
 
-
-/* ヘッダー */
-.header {
-    max-width: 100%;
-    /* height: 5vh; */
-
-    display: flex;
-    align-items: center;
-}
-
-.nav {
-    width: 70%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.nav_flex {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.item {
-    margin: 0.5rem 0;
-    padding: clamp(0.5rem, 1vw, 1rem);
-    font-size: clamp(0.75rem, 5vw, 2rem);
-}
-
-
-
 /* メインビジュアルのレイアウト */
-.mainvisual_flex {
-    height: 90vh;
-
-    display: flex;
-    flex-direction: row-reverse;
-
+.mainvisual_wrap {
+    height: 70Vmin;
     position: relative;/* scrolldown用 */
 } 
 
 /* 画像 */
-.img_box {
-    flex: 1;
-    padding-top: 5vh;
-
+.img_box { 
+    width: 100%;/* 9/13更新(画像のサイズ修正）*/
+    height: auto;
     position: relative;/* 画像が浮くのを防ぐ */
-}
+    /* 9/13更新 中央寄せ */
+    display: flex;
+    justify-content: center;
+}    
 
 .img {
+    /* 画像サイズはjsで直接指定、 レスポンシブで随時調整する*/
     max-width: 100%;
-    object-fit: contain;
+    height: auto;
+    object-fit: cover;/* 600pxまではcoverで */
+    opacity: 0.8;/*主張強かったから薄める*/
+    
 }
 
 /* タイトル */
 .title {
-    flex: 1;
-    padding-top: min(25vh, 20vw);
-    background-color: transparent;
+    /* 9/13更新、画像を背景化 */
+    width: 60%;
+    position: absolute;
+    top: 30%;/* レスポンシブ */
+    left: 5%;
+}
+
+.icon_box {
+    display: inline-block;
+    line-height: 0;
 }
 
 .icon {
     margin: 10px;
     animation: icon-up 2s forwards;
-    animation-delay: 1.5s;
+    animation-delay: 1.8s;
     opacity: 0;
 }
 @keyframes icon-up {
@@ -94,46 +74,62 @@
     }
 }
 
+
 /* スクロールアニメーション */
 .scrolldown {
-    margin: 0;
-    width: 2px;
-    height: 10vh;
-    background-color: #000;
-    position: relative;
-    opacity: 0;
-    animation: scrolldown-bar 3.5s ease-in-out infinite;
-    animation-delay: 1s;
-
     position: absolute;
-    top: 70%;
-    left: 35%; 
+    bottom: 7Vmin;/* レスポンシブ調整する */
+    left: 50%;
+    /* margin: 0; */
+    /* width: 2px; */
+    /* height: 10vh; */
+    /* background-color: #000; */
+    /* position: relative; */
+    /* opacity: 0; */
+    /* animation: scrolldown-bar 3.5s ease-in-out infinite; */
+    /* animation-delay: 1s; */
+
+    /* position: absolute; */
+    /* top: 70%; */
+    /* left: 35%;  */
 }
-.scroll_ball {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    background-color: #000;
-
+.scroll {
+    /* 文字の位置 */
     position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-50%,-50%);
-    opacity: 0;
-    animation: scrolldown-ball 3.5s ease-in-out infinite;
-    animation-delay: 1s;
+    right: 5px;/* 文字と合わせてレスポンシブ調整 */
+    bottom: 3px;
+    transform: rotate(90deg);
+    /* font-size: ;レスポンシブ調整 */
+
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+    /* transform: translate(-50%,-50%); */
+    /* opacity: 0; */
+    /* animation: scrolldown-ball 3.5s ease-in-out infinite; */
+    /* animation-delay: 1s; */
 }
-.scrolldown::before {
-    content: "scroll→";
-
-    position: absolute;
-    top: 0;
-    left: 0.1em;
-    transform: rotate(90deg) translate(-60%);
-    z-index: 1;
-    opacity: 0;
-    animation: scrolldown-ball 3.5s ease-in-out infinite;
-    animation-delay: 1s;
+.scrolldown::before,
+.scrolldown::after {
+    /* 線 */
+    content: "";
+    display: block;
+    width: 1px;
+    height: 10Vmin;/* レスポンシブ後で調整する */
+    background-color: #666;
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0.1em; */
+    /* transform: rotate(90deg) translate(-60%); */
+    /* z-index: 1; */
+    /* opacity: 0; */
+    /* animation: scrolldown-ball 3.5s ease-in-out infinite; */
+    /* animation-delay: 1s; */
+}
+.scrolldown::after {
+    /* 矢羽根 */
+    height: 3Vmin;/*レスポンシブ時は比率で調整する必要あり*/
+    transform: translate(1.2Vmin, -3Vmin) skewX(-40deg);
 }
 
 @keyframes scrolldown-bar {
@@ -174,46 +170,23 @@
     モバイル 
 ---------------*/
 @media (max-width: 700px) {
-    .scrolldown {
-        top: 65%;
-        left: 35%;
-    }
+    
 }
 
 @media screen and (max-width:600px) {
-    .header {
-        height: 5vh;
-        margin-top: 1vh;
+    .title {
+        top: 15%;
     }
-    
-    .logo {
-        width: 30%;
+    .icon {
+        width: 40%;
         height: auto;
-        flex-shrink: 1;
-    }
-}
-
-@media (max-height: 500px) {
-    .scrolldown {
-        top: 50%;
-        left: 85%;
+        margin: 5px;
     }
 }
 
 @media screen and (max-width:300px) {
-    .scrolldown {
-        top: 80%;
-        left: 50%;
-    }
-    
     .mainvisual_flex {
         height: 60vh;
         flex-direction: column;
-    } 
-
-    .title {
-        flex: 0.8;
-        padding-top: min(25vh, 20vw);
-        background-color: transparent;
     }
 }

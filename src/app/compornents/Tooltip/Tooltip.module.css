@@ -1,0 +1,18 @@
+.container {
+    position: relative;
+}
+
+.text {
+    display: inline-block;
+    width: 10rem;
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    transform: var(--transform);
+}
+
+@media screen and (max-width: 400px) {
+    .text {
+        font-size: 50%;
+    }
+}

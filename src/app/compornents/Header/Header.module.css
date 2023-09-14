@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    width: min(1020px, 90%);
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.h1 {
+    line-height: 0;
+}
+
+.link {
+    display: block;
+}
+
+
+.nav {
+    /* width: 70%; */
+    margin-right: 0;
+    text-align: center;
+}
+
+.nav_flex {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.item {
+    margin: 0 0.5rem;
+    padding: clamp(0.5rem, 1vw, 1rem);
+    font-size: clamp(0.5rem, 5Vmin, 2rem);
+}
+
+@media screen and (max-width:600px) {
+    .header {
+        margin-top: 1vh;
+    }
+    
+    .logo {
+        width: 10Vmin;
+        height: auto;
+        flex-shrink: 1;
+    }
+}

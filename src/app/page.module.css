@@ -1,15 +1,15 @@
 .fixed {
     width: 100%;
     height: 100vh;
-    position: fixed;
+    /* position: fixed; 浮かせる
     top: 0;
-    left: 0;
-}
+    left: 0;*/
+} 
 
 .flow {
     width: 100vw;
-    position: absolute;
-    top: 100vh;
+    /* position: absolute; 浮かせる用*/
+    /* top: 100vh; 浮かせる用*/
     /* 操作性の設定 */
 }
 
