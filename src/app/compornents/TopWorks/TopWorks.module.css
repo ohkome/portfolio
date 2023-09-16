@@ -7,7 +7,7 @@
 }
 
 .layout_grid {
-    width: 100Vmin;
+    max-width: 100Vmin;
     height: 100Vmin;
     margin: 5vh auto;
     display: grid;
@@ -29,8 +29,8 @@
 
 @media screen and (max-width: 1025px) {
     .layout_grid {
-        width: 70Vmin;
-        height: 70Vmin;
+        max-width: 70Vmin;
+        max-height: 70Vmin;
         margin: 5vh auto;
     
         /* display: grid; */
@@ -41,8 +41,8 @@
 
 @media screen and (max-width: 600px) {
     .layout_grid {
-        width: 70Vmin;
-        height: calc(70Vmin * 1.5);
+        max-width: 70Vmin;
+        max-height: calc(70Vmin * 1.5);
         margin: 3vh auto;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr 1fr 1fr;

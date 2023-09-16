@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <footer >
-          <p>2023 minori's portfolio</p>
+          <p>2023 minori&apos;s portfolio</p>
         </footer>
       </body>
     </html>
