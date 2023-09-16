@@ -1,0 +1,56 @@
+.mainvisual {
+    height: 90Vmin;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    position: relative;
+}
+
+.title_wrapper {
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(5, 5, 5, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    display: block;
+}
+
+
+
+
+
+
+.layout_grid {
+    width: 100Vmin;
+    height: 100Vmin;
+    /* height: 80Vmax; */
+    /* height: calc(60Vmax * 0.75); */
+    margin: 10vh auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    grid-gap: 1Vmin;
+    align-items: center;
+}
+
+.works_item {
+    max-width: 100%;
+    /* height: calc(100% * 0.75); */
+    height: 100%;
+    position: relative; /* image用 */
+}
+
+.works_img {
+    max-width: 100%;
+    object-fit: contain;
+}

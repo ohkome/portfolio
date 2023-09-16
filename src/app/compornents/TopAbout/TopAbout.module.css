@@ -1,5 +1,6 @@
 /* 共通要素 */
 .topAbout {
+    width: 100%;
     margin: auto;
     background-color: #9E9E9E;
 }

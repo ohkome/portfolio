@@ -1,12 +1,13 @@
-import React from 'react';
+import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image';
-import styles from './TopWorks.module.css';
+import Image from 'next/image'
+import styles from '../Works/Works.module.css'
 // コンポーネント
-import SectionTitle from '../SectionTitle/SectionTitle';
-import BackgroundSlider from '../BackgroundSlider/BackgroundSlider';
+import SectionTitle from '../compornents/SectionTitle/SectionTitle'
+import BackgroundSlider from '../compornents/BackgroundSlider/BackgroundSlider'
 
-const TopWorks = () => {
+const page = () => {
+
 
   const worksDesign = [
     {
@@ -85,34 +86,41 @@ const TopWorks = () => {
   ]
 
   return (
-    <section className={styles.topWorks}>
-      <SectionTitle 
-      enText="Works" 
-      jaText="作品"
-      enMainColor="#000"
-      jaColor="#ccc"
-      boxColor="#ccc"
-      className={styles.title}
-    />
+    <div>
+        {/* メインビジュアル */}
+      <div className={styles.mainvisual}>
+        <BackgroundSlider />
+        <div className={styles.title_wrapper}>
+          <SectionTitle 
+          enText="Works" 
+          jaText="作品"
+          enMainColor="#000"
+          jaColor="#ccc"
+          boxColor="#ccc"
+          className={styles.title}
+          />
+        </div>
+      </div>
 
-    <ul className={styles.layout_grid}>
-      {worksDesign.map((item,index) => {
-        return(
-          <li key={index} className={styles.works_item}>
-            <Link href={item.href}>
-              <Image 
-              src={item.src} 
-              alt={item.alt} 
-              fill
-              className={styles.works_img}
-              />
-            </Link>
-          </li>
-        )
-      })}
-    </ul>
-    </section>
-  );
-};
+      <ul className={styles.layout_grid}>
+              {worksWeb.map((item,index) => {
+                return(
+                  <li key={index} className={styles.works_item}>
+                    <Link href={item.href}>
+                      <Image 
+                      src={item.src} 
+                      alt={item.alt} 
+                      fill
+                      className={styles.works_img}
+                      />
+                    </Link>
+                  </li>
+                )
+              })}
+      </ul>
+          
+    </div>
+  )
+}
 
-export default TopWorks;
+export default page

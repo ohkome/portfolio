@@ -1,89 +1,25 @@
 .topWorks {
     padding-top: 10vh;
+    padding-bottom: 5vh;
     background-color: aliceblue;
-}
 
-.wrapper {
-    width: min(1020px, 95%);
-    margin: 0 auto;
-    padding: clamp(5rem, 8vw, 20rem) clamp(3rem, 5vw, 10rem);
-}
-
-.mainvisual {
-    width: 100%;
-    /* height: 100vh; */
-    height: 90Vmin;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    position: relative;
-}
-
-.title_wrapper {
-    width: 50%;
-    height: 50%;
-    text-align: center;
-    vertical-align: middle;
-    background-color: rgba(5, 5, 5, 0.5);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.title {
-    display: block;
-}
-
-/* 作品部分 */
-.layout_flex {
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.reverce {
-    flex-direction: row-reverse;
-}
-
-.works_tag {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: clamp(0.75rem, 5vw, 2rem);
+    text-align: center;/* タイトル */
 }
 
 .layout_grid {
-    width: 65%;
-    /* height: 60vh; */
-    height: calc(65vw * 0.75);
-    margin-top:10vh;
-    margin-bottom: 10vh;
-
+    width: 100Vmin;
+    height: 100Vmin;
+    margin: 5vh auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5% 10%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1Vmin;
     align-items: center;
-    background-color: antiquewhite;
 }
 
 .works_item {
     max-width: 100%;
-    height: calc(100% * 0.75);
-    background-color: aqua;
+    height: 100%;
     position: relative; /* image用 */
-}
-
-.works_item:nth-child(3n) {
-    width: 50%;
-    grid-column-start: 1;
-    grid-column-end: 3; 
-    justify-self: center;
 }
 
 .works_img {
@@ -91,15 +27,24 @@
     object-fit: contain;
 }
 
-@media screen and (max-width: 1020px) {
-    .layout_flex {
-        flex-direction: column;
-        justify-content: center;
-    }
-    
+@media screen and (max-width: 1025px) {
     .layout_grid {
-        max-width: 100%;
-        grid-gap: 1% 5%;
-        margin:10vh auto;
+        width: 70Vmin;
+        height: 70Vmin;
+        margin: 5vh auto;
+    
+        /* display: grid; */
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-gap: 5% 10%; */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .layout_grid {
+        width: 70Vmin;
+        height: calc(70Vmin * 1.5);
+        margin: 3vh auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
     }
 }

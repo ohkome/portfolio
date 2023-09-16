@@ -12,6 +12,9 @@ export default function RootLayout({ children }) {
       <body className='wrapper'>
         <Header />
         {children}
+        <footer >
+          <p>2023 minori's portfolio</p>
+        </footer>
       </body>
     </html>
   )

@@ -5,7 +5,7 @@ import styles from './Header.module.css';
 
 const navigationMenu = [
     {
-    href: "#",
+    href: "/",
     label: "Home",
     },
     {
@@ -13,7 +13,7 @@ const navigationMenu = [
     label: "About",
     },
     {
-    href: "#",
+    href: "/Works",
     label: "Works",
     }
 ]
