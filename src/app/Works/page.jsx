@@ -84,43 +84,36 @@ const page = () => {
       href: ''
     },
   ]
-
   return (
-    <div>
-        {/* メインビジュアル */}
-      <div className={styles.mainvisual}>
-        <BackgroundSlider />
-        <div className={styles.title_wrapper}>
-          <SectionTitle 
-          enText="Works" 
-          jaText="作品"
-          enMainColor="#000"
-          jaColor="#ccc"
-          boxColor="#ccc"
-          className={styles.title}
-          />
-        </div>
-      </div>
+    <section className={styles.topWorks}>
+      <SectionTitle 
+      enText="Works" 
+      jaText="作品"
+      enMainColor="#000"
+      jaColor="#ccc"
+      boxColor="#ccc"
+      className={styles.title}
+    />
 
-      <ul className={styles.layout_grid}>
-              {worksWeb.map((item,index) => {
-                return(
-                  <li key={index} className={styles.works_item}>
-                    <Link href={item.href}>
-                      <Image 
-                      src={item.src} 
-                      alt={item.alt} 
-                      fill
-                      className={styles.works_img}
-                      />
-                    </Link>
-                  </li>
-                )
-              })}
-      </ul>
-          
-    </div>
-  )
+    <ul className={styles.layout_grid}>
+      {worksDesign.map((item,index) => {
+        return(
+          <li key={index} className={styles.works_item}>
+            <Link href={item.href}>
+              <Image 
+              src={item.src} 
+              alt={item.alt} 
+              fill
+              className={styles.works_img}
+              />
+            </Link>
+          </li>
+        )
+      })}
+    </ul>
+    </section>
+  );
+
 }
 
 export default page

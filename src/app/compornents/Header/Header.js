@@ -9,7 +9,7 @@ const navigationMenu = [
     label: "Home",
     },
     {
-    href: "#",
+    href: "/About",
     label: "About",
     },
     {
@@ -20,6 +20,8 @@ const navigationMenu = [
 
 const Header = () => {
     return (
+
+
         <header className={styles.header}>
             {/* svg-logo */}
             <h1 className={styles.h1}>
@@ -31,6 +33,9 @@ const Header = () => {
                     width={100}
                     height={50}
                     className={styles.logo}
+                    //mousehoverのアクションと、ページを開いている時の表示の仕方の違いについて記載
+                    //onMouseEnter={() => setMenu(true)}//ホバー時
+                    //onMouseLeave={() => setMenu(false)}//ホバーじゃない時
                     />
                 </Link>
             </h1>

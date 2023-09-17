@@ -8,82 +8,6 @@ import BackgroundSlider from '../BackgroundSlider/BackgroundSlider';
 
 const TopWorks = () => {
 
-  const worksDesign = [
-    {
-      src: '/tours.jpg',
-      alt: 'LP-登山ツアー(架空)',
-      href: ''
-    },
-    {
-      src: '/businesscard.jpg',
-      alt: '名刺',
-      href: '#'
-    },
-    {
-      src: '/english.jpg',
-      alt: 'オンライン英会話のバナー',
-      href: ''
-    },
-    {
-      src: '/pop.jpg',
-      alt: '店内ポップ',
-      href: ''
-    },
-    {
-      src: '/shopcard.jpg',
-      alt: 'ショップカード',
-      href: ''
-    },
-    {
-      src: '/mothersday.jpg',
-      alt: '母の日ポストカード',
-      href: ''
-    },
-    {
-      src: '/himawari.jpg',
-      alt: 'LP-高齢者住宅紹介(架空)',
-      href: ''
-    },
-    {
-      src: '/kujira.jpg',
-      alt: 'Webサイト-カフェ(架空)-',
-      href: ''
-    },
-    {
-      src: '/mosya.jpg',
-      alt: 'LP-職業訓練校の一例',
-      href: ''
-    },
-  ]
-
-  const worksWeb = [
-    {
-      src: '/himawari.jpg',
-      alt: 'LP-高齢者住宅紹介(架空)',
-      href: ''
-    },
-    {
-      src: '/kujira.jpg',
-      alt: 'Webサイト-カフェ(架空)-',
-      href: ''
-    },
-    {
-      src: '/tours.jpg',
-      alt: 'LP-登山ツアー(架空)',
-      href: ''
-    },
-    {
-      src: '/mosya.jpg',
-      alt: 'Webサイト-ポートフォリオサイト-',
-      href: ''
-    },
-    {
-      src: '/mosya.jpg',
-      alt: 'LP-職業訓練校の一例',
-      href: ''
-    },
-  ]
-
   return (
     <section className={styles.topWorks}>
       <SectionTitle 
@@ -92,25 +16,39 @@ const TopWorks = () => {
       enMainColor="#000"
       jaColor="#ccc"
       boxColor="#ccc"
-      className={styles.title}
-    />
+      />
 
-    <ul className={styles.layout_grid}>
-      {worksDesign.map((item,index) => {
-        return(
-          <li key={index} className={styles.works_item}>
-            <Link href={item.href}>
-              <Image 
-              src={item.src} 
-              alt={item.alt} 
-              fill
-              className={styles.works_img}
-              />
-            </Link>
-          </li>
-        )
-      })}
-    </ul>
+      <ul className={styles.item_box}>
+        <li className={styles.item}>
+          <Image 
+          src='/english.jpg'
+          alt='オンライン英会話のバナー'
+          width={300}
+          height={250}
+          />
+          <div className={styles.text}>
+            <h3>Design</h3>
+            <p className={styles.text_content}>何を伝えたいか、デザインを通してどのようなアクションをして欲しいか、目的や優先順位を確認しながらデザインを考えています。</p>
+          </div>
+        </li>
+
+        <li className={styles.item}>
+          <div className={styles.text}>
+            <h3>Web</h3>
+            <p className={styles.text_content}>他人が見た時にどういう意図でコーディングしているのかがわるように、見やすいコードを意識して制作しています。</p>
+          </div>
+          <Image 
+          src='/himawari.png'
+          alt='高齢者住宅紹介会社のLP'
+          width={300}
+          height={200}
+          />
+        </li>
+      </ul>
+
+      <Link href='/About' className={styles.btn_layout}>
+        <span className={styles.btn}> Page Works</span>
+      </Link>
     </section>
   );
 };
