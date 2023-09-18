@@ -1,3 +1,78 @@
+.about {
+    background-color: #F5F5F5;
+}
+
+/* philosophy */
+.philosophy {
+    width: min(1020px, 90%);;
+    margin:0 auto;
+    padding: clamp(0.6rem, 20Vmin, 10rem) clamp(0.3rem, 10Vmin, 5rem);
+    background-color: #9E9E9E;
+    font-weight: bold;
+    text-align: center;
+}
+
+.intro {
+    max-width: 39em;
+    margin: clamp(0.6rem, 6Vmin, 8rem) auto clamp(0.6rem, 10Vmin, 16rem);
+    color: #fff;
+    line-height: 2.6;
+    /* text-align: justify; */
+}
+
+.content_title {
+    margin-bottom: clamp(0.6rem, 4Vmin, 10rem);
+    font-size: 180%;
+    /* font-weight: bold; */
+    text-wrap: balance;
+}
+
+.layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+}
+.layout::before {
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 5rem;
+    background-color: #fff;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+}
+.layout::after {
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 5rem;
+    background-color: #fff;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%) rotate(-45deg);
+}
+
+.item {
+    width: 40%;
+}
+
+.item_title {
+    padding-bottom: clamp(0.3rem, 2Vmin, 5rem);
+    /* font-weight: bold; */
+    font-size: 120%;
+}
+
+.item_text {
+    text-align: justify;
+}
+
+
+
+
 /* 共通要素 */
 .topAbout {
     width: 100%;

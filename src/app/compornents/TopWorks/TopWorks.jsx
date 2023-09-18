@@ -18,7 +18,7 @@ const TopWorks = () => {
       boxColor="#ccc"
       />
 
-      <ul className={styles.item_box}>
+      <ul>
         <li className={styles.item}>
           <Image 
           src='/english.jpg'

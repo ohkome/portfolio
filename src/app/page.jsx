@@ -10,14 +10,10 @@ import TopWorks from './compornents/TopWorks/TopWorks'
 export default function Home() {
   return (
     <main>
-      <div className={styles.fixed}>
+      <div className={styles.wrapper}>
         <Top />
-      </div>
-      <div className={styles.flow}>
         <TopAbout />
-        <TopWorks
-        className={styles.works}
-        />
+        <TopWorks />
       </div>
     </main>
   )

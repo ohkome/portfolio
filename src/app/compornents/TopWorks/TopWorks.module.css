@@ -6,7 +6,7 @@
 }
 
 .item {
-    max-width: 70%;
+    width: min(70%, 900px);
     margin: clamp(0.6rem, 20Vmin, 10rem) auto;
     /* padding-bottom: 1rem; */
     padding: 1rem clamp(0.6rem, 3Vmin, 10rem);
@@ -16,10 +16,6 @@
     align-items: center;
     text-align: left;
 }
-
-/* .item:first-of-type {
-    justify-content: space-between;
-} */
 
 .text {
     width: 50%;

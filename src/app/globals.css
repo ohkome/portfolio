@@ -107,11 +107,11 @@ ul {
 }
 
 .wrapper {
-  /* width: 100vw; */
   /* スクロールバーも含めるため１００％に修正 */
   max-width: 100%;
   /* padding: 1%; */
   margin: 0 auto;
+  line-height: 1.7;
 }
 
 footer {
