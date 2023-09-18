@@ -23,8 +23,8 @@ const TopWorks = () => {
           <Image 
           src='/english.jpg'
           alt='オンライン英会話のバナー'
-          width={300}
-          height={250}
+          width={240}
+          height={200}
           />
           <div className={styles.text}>
             <h3>Design</h3>

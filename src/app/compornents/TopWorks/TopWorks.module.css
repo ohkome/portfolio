@@ -6,9 +6,10 @@
 }
 
 .item {
-    max-width: 60%;
+    max-width: 70%;
     margin: clamp(0.6rem, 20Vmin, 10rem) auto;
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
+    padding: 1rem clamp(0.6rem, 3Vmin, 10rem);
     border-bottom: solid 1px #ccc;
     display: flex;
     justify-content: space-between;
@@ -23,6 +24,7 @@
 .text {
     width: 50%;
     margin: auto;
+    padding: 1rem;
 }
 
 .text_content {
@@ -65,4 +67,25 @@
     position: absolute;
     top: 100%;
     left: 0;
+}
+
+@media screen and (max-width:900px){
+    .item {
+        max-width: 70%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .item {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .item:last-child {
+        flex-direction: column-reverse;
+    }
+    
+    .text {
+        width: 100%;;
+    }
 }
