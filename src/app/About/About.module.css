@@ -4,7 +4,7 @@
 
 /* philosophy */
 .philosophy {
-    width: min(1020px, 90%);;
+    width: min(1020px, 90%);
     margin:0 auto;
     padding: clamp(0.6rem, 20Vmin, 10rem) clamp(0.3rem, 10Vmin, 5rem);
     background-color: #9E9E9E;
@@ -13,11 +13,11 @@
 }
 
 .intro {
-    max-width: 39em;
+    max-width: 40em;
     margin: clamp(0.6rem, 6Vmin, 8rem) auto clamp(0.6rem, 10Vmin, 16rem);
     color: #fff;
     line-height: 2.6;
-    /* text-align: justify; */
+    text-align: justify;
 }
 
 .content_title {
@@ -27,28 +27,28 @@
     text-wrap: balance;
 }
 
-.layout {
+.philosophy_layout {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
 }
-.layout::before {
+.philosophy_layout::before {
     content: '';
     display: block;
-    width: 1rem;
-    height: 5rem;
+    width: 1Vmin;
+    height: 5Vmin;
     background-color: #fff;
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%) rotate(45deg);
 }
-.layout::after {
+.philosophy_layout::after {
     content: '';
     display: block;
-    width: 1rem;
-    height: 5rem;
+    width: 1Vmin;
+    height: 5Vmin;
     background-color: #fff;
     position: absolute;
     top: 40%;
@@ -57,64 +57,106 @@
 }
 
 .item {
-    width: 40%;
+    width: 43%;
 }
 
 .item_title {
     padding-bottom: clamp(0.3rem, 2Vmin, 5rem);
     /* font-weight: bold; */
     font-size: 120%;
+    z-index: 1;
 }
 
 .item_text {
     text-align: justify;
 }
 
-
-
-
-/* 共通要素 */
-.topAbout {
-    width: 100%;
-    margin: auto;
-    background-color: #9E9E9E;
+@media screen and (max-width: 900px) {
+    .content_title {
+        font-size: 130%;
+    }
+    .item_title {
+        font-size: 100%;
+    }
+    .item_text {
+        font-size: 90%;
+    }
 }
 
-.wrapper {
+@media screen and (max-width: 600px) {
+    .intro {
+        font-size: 80%;
+    }
+    .philosophy_layout {
+        flex-direction: column;
+    }
+
+    .philosophy_layout::before,
+    .philosophy_layout::after {
+        top: 45%;
+    }
+
+    .item {
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .content_title {
+        font-size: 120%;
+    }
+    .item_title {
+        font-size: 100%;
+    }
+    .item_text {
+        font-size: 90%;
+    }
+}
+
+
+/* profile */
+.profile {
     width: min(1020px, 90%);
     margin: 0 auto;
-    padding: clamp(3rem, 20Vmin, 50rem) clamp(1rem, 5Vmin, 10rem);
-    /* padding: clamp(3rem, 5vw, 10rem); */
-    /* レイアウトの調整 */
+    padding: clamp(0.6rem, 20Vmin, 10rem) clamp(0.3rem, 10Vmin, 5rem);
+}
+
+.section_title {
+    text-align: center;
+}
+
+.profile_layout {
+    margin: clamp(0.6rem, 6Vmin, 8rem) auto clamp(0.6rem, 10Vmin, 16rem);
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
-/* title */
-.title {
-    width: 35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.img_box {
+    width: 45%;
+    position: relative;
 }
 
-/* text */
+.img {
+    width: 100%;
+    object-fit: contain;
+}
+
 .text {
-    width: 50%;
+    width: 45%;
     margin: 0 auto;
     font-size: clamp(0.875rem, 1.5vw, 1rem)
 }
 
 .name {
-    margin-bottom: 1.5rem;
-    font-size: clamp(0.5rem, 150%, 2rem);
+    margin-bottom: 1rem;
+    font-size: clamp(0.5rem, 120%, 2rem);
     font-weight: normal;
+    line-height: 1;
 }
 
 .name_en {
     display: block;
-    font-size: clamp(0.3rem, 120%, 1rem);
+    font-size: clamp(0.3rem, 90%, 1rem);
 }
 
 .name_ja {

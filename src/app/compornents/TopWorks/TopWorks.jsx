@@ -46,8 +46,8 @@ const TopWorks = () => {
         </li>
       </ul>
 
-      <Link href='/About' className={styles.btn_layout}>
-        <span className={styles.btn}> Page Works</span>
+      <Link href='/Works' className={styles.btn_layout}>
+        <span className={styles.btn}> Works Page</span>
       </Link>
     </section>
   );

@@ -1,7 +1,10 @@
 import React from 'react'
+import Image from 'next/image'
 import styles from './About.module.css'
-import SectionTitle from '../compornents/SectionTitle/SectionTitle'
 
+// コンポーネント
+import SectionTitle from '../compornents/SectionTitle/SectionTitle'
+import Skills from '../compornents/Skills/Skills'
 const page = () => {
 return (
     <div className={styles.about}>
@@ -12,15 +15,15 @@ return (
                 enMainColor="#000"
                 jaColor="#fff"
                 boxColor="#fff"
-                className={styles.section_title}
             />
             <p className={styles.intro}>
-            &emsp;これまでの経験から、本人も気がついていないニーズに目をむけ、本心を汲み取り、形にして提供する。そうして喜んでもらえた時にやりがいを感じると実感しました。<br />
-            &emsp;「相手の期待以上のものを作り出すこと」を日々意識しています。<br />
+            &emsp;「相手の期待以上のものを作り出すこと」を日々意識して業務に取り組んできました。<br />
+            これまでの経験から、本人も気がついていないニーズに目をむけ、本心を汲み取り、形にして提供する。そうして喜んでもらえた時にやりがいを感じると実感しました。<br />
+            &emsp;「相手の期待以上のものを作り出すこと」をこれからも大切にしていきます。
             </p>
             <div className={styles.content}>
                 <h3 className={styles.content_title}>「相手の期待以上の成果を出す」ために磨いてきた２つのこと</h3>
-                <ul className={styles.layout}>
+                <ul className={styles.philosophy_layout}>
                     <li className={styles.item}>
                         <dl>
                             <dt className={styles.item_title}>相手の意図を汲み取る力</dt>
@@ -41,40 +44,55 @@ return (
             </div>
         </section>
 
-    <div className={styles.text}>
-        <h3 className={styles.name}>
-            <span className={styles.name_en}>Minori Komeichi</span>
-            <span className={styles.name_ja}>古明地 みのり</span>
-        </h3>
-        <p className={styles.summary}>
-            1997年2月生まれ。<br/>
-            北海道の田舎町で育つ。<br/>
-            大学卒業後、大学病院で２年勤務。<br/>
-            看護師として働く中で、「いつ何が起こるかわからない、やれる時にやりたい事に挑戦したい」と思うようになり、以前から興味のあったWeb業界への転職を決意する。
-        </p>
-        <h4 className={styles.list_title}>経歴</h4>
-        <dl className={styles.dl_layout}>
-            <dt className={styles.list_item_title}>2021年</dt>
-            <dt className={styles.list_item}>弘前大学卒業</dt>
+        <Skills />
+        {/* <Career /> */}
 
-            <dt className={styles.list_item_title}>2021年</dt>
-            <dd className={styles.list_item}>大学病院に看護師として入職</dd>
+        <section className={styles.profile}>
+            <div className={styles.section_title}>
+                <SectionTitle 
+                enText="Profile"
+                jaText="プロフィール"
+                enMainColor="#000"
+                jaColor="##9E9E9E"
+                boxColor="#9E9E9E"
+                />
+            </div>
+            <div className={styles.profile_layout}>
+                <div className={styles.img_box}>
+                    <Image
+                    src='/portfolio-test.jpg'
+                    fill
+                    className={styles.img}
+                    />
+                </div>
+                <div className={styles.text}>
+                    <h3 className={styles.name}>
+                        <span className={styles.name_en}>Minori Komeichi</span>
+                        <span className={styles.name_ja}>古明地 みのり</span>
+                    </h3>
+                    <p className={styles.summary}>
+                        1997年2月生まれ。<br/>
+                        北海道の田舎町で育つ。<br/>
+                        大学卒業後、大学病院で２年勤務。<br/>
+                        看護師として働く中で、「いつ何が起こるかわからない、やれる時にやりたい事に挑戦したい」と思うようになり、以前から興味のあったWeb業界への転職を決意する。
+                    </p>
+                    <h4 className={styles.list_title}>経歴</h4>
+                    <dl className={styles.dl_layout}>
+                        <dt className={styles.list_item_title}>2021年</dt>
+                        <dt className={styles.list_item}>弘前大学卒業</dt>
 
-            <dt className={styles.list_item_title}>2023年</dt>
-            <dd className={styles.list_item}>求職者支援訓練校入校</dd>
-        </dl>
+                        <dt className={styles.list_item_title}>2021年</dt>
+                        <dd className={styles.list_item}>大学病院に看護師として入職</dd>
 
-        <h4 className={styles.list_title}>スキル</h4>
-        <ul className={styles.ul_layout}>
-            <li>Photoshop / illustrator 
-                <span  className={styles.ul_list_layout}>---デザイン作成、写真加工</span></li>
-            <li>HTML / CSS / Wordpress 
-                <span className={styles.ul_list_layout}>---LP、WEBサイト作成</span></li>
-            <li>JavaScript / React / Next Js  
-                <span className={styles.ul_list_layout}>---学習中</span></li>
-        </ul>
-        </div>
+                        <dt className={styles.list_item_title}>2023年</dt>
+                        <dd className={styles.list_item}>求職者支援訓練校入校</dd>
+                    </dl>
+                </div>
+            </div>
+            
+        </section>
 
+    
     </div>
 )
 }
