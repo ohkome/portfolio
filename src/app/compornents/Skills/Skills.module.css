@@ -1,7 +1,79 @@
 .skills {
+    width: min(1020px, 90%);
+    margin:0 auto;
+    padding: clamp(0.6rem, 20Vmin, 10rem) clamp(0.3rem, 10Vmin, 5rem);
+    letter-spacing: 0.1em;
+    font-weight: bold;
     text-align: center;
 }
 
+.intro {
+    max-width: 58em;
+    margin-left: 20%;
+    padding-top: clamp(0.2rem, 6Vmin, 3rem);
+    text-align: center;
+    font-size: 60%;
+}
+
 .text {
-    text-align: left;
+    font-size: 120%;
+}
+
+.list {
+    margin-top: clamp(0.2rem, 2Vmin, 1rem);
+}
+
+/* motion */
+.button {
+    width: 8em;
+    height: 8em;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    /* border: solid 2px #ccc; */
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;/*文字が埋もれちゃうため、topとぇｆｔで表示位置を調整*/
+}
+
+.button span {
+    display: block;
+    font-size: 80%;
+}
+
+.skills_box {
+    display: flex;
+    height: 60vh;
+    max-width: 100%;
+    background-color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+    position: relative;/*button用*/
+   
+}
+
+.ul {
+    animation: fadein 2s ease-in-out forwards;
+    background-color: aqua; 
+}
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.ul:hover.li:hover{
+    opacity: 0.1;
+}
+
+.li:hover{
+    opacity: 0.2;
 }

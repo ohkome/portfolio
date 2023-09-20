@@ -20,12 +20,11 @@ const Tooltip = (props) => {
     return (
     <div
     className={styles.container} 
-    
     onMouseEnter={() => setShow(true)} 
     onMouseLeave={() => setShow(false)} 
     >
     {props.children}
-    {show && <p className={styles.text} style={position}>{props.text}</p>}
+    {show && <div className={styles.text} style={position}>{props.text}</div>}
     </div>
     );
 };

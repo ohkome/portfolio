@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -5,7 +6,7 @@ import styles from '../Works/Works.module.css'
 // コンポーネント
 import SectionTitle from '../compornents/SectionTitle/SectionTitle'
 import BackgroundSlider from '../compornents/BackgroundSlider/BackgroundSlider'
-
+import Tset from '../compornents/Contact/Tset'
 const page = () => {
 
 
@@ -111,6 +112,8 @@ const page = () => {
         )
       })}
     </ul>
+
+    <Tset />
     </section>
   );
 

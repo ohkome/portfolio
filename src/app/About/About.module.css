@@ -13,11 +13,13 @@
 }
 
 .intro {
-    max-width: 40em;
+    max-width: 44em;
     margin: clamp(0.6rem, 6Vmin, 8rem) auto clamp(0.6rem, 10Vmin, 16rem);
     color: #fff;
     line-height: 2.6;
-    text-align: justify;
+    letter-spacing: 0.1em;
+    
+    /* text-align: justify; */
 }
 
 .content_title {
