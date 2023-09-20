@@ -14,10 +14,10 @@ const Skills = () => {
         title: 'Photoshop',
         top: '-200%',
         left: '100%',
-        pTOP: '10%',
-        PLEFT: '10%',
+        ptop: '0%',
+        pleft: '-100%',
         time: '1',
-        text: '基本的な操作、簡単な画像合成ができます',
+        text: '基本的な操作:簡単な画像合成ができます',
         },
         {
         title: 'illustrator',
@@ -25,7 +25,17 @@ const Skills = () => {
         left: '50%',
         ptop:'100%',
         pleft: '50%',
-        text: ''
+        time: '1',
+        text: '',
+        },
+        {
+        title: 'illustrator',
+        top: '100%',
+        left: '50%',
+        ptop:'100%',
+        pleft: '50%',
+        time: '1',
+        text: '',
         },
 
     ];
@@ -40,7 +50,7 @@ const Skills = () => {
                     (
                         <li style={{ paddingTop: item.ptop, paddingLeft: item.pleft}}>
                             <Tooltip
-                            key={item.index}
+                            key={index}
                             top={item.top}
                             left={item.left}
                             text={
@@ -65,7 +75,7 @@ const Skills = () => {
             // クリーンアップ
             return () => clearTimeout(timeoutId);
         });
-    }, []);
+    }, [skillsData]);// skillsData を依存関係として追加
 
     return (
         <section className={styles.skills}>
