@@ -9,13 +9,13 @@ import Tooltip from '../Tooltip/Tooltip'
 
 const Skills = () => {
     // motion内のskills
-    const skillsDate = [
+    const skillsData = [
         {
         title: 'Photoshop',
         top: '-200%',
         left: '100%',
         ptop: '0%',
-        pleft: '-100%',
+        pright: '100%',
         time: '1',
         text: '基本的な操作:簡単な画像合成ができます',
         },
@@ -43,14 +43,14 @@ const Skills = () => {
     const [skillItems, setSkillItems] = useState([]);
 
     useEffect(() => {
-        skillsDate.forEach((item, index) => {
+        skillsData.map((item, index) => {
             setTimeout(() => {
                 setSkillItems(prevItems => [
                     ...prevItems,
                     (
-                        <li style={{ paddingTop: item.ptop, paddingLeft: item.pleft}}>
+                        <li style={{ paddingTop: item.ptop, paddingLeft: item.pleft, paddingRight: item.pright, paddingBottom: item.pbottom}}>
                             <Tooltip
-                            key={index}
+                            key={index} 
                             top={item.top}
                             left={item.left}
                             text={
@@ -75,7 +75,7 @@ const Skills = () => {
             // クリーンアップ
             return () => clearTimeout(timeoutId);
         });
-    }, [skillsData]);// skillsData を依存関係として追加
+    }, []);
 
     return (
         <section className={styles.skills}>
