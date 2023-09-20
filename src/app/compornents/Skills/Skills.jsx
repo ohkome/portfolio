@@ -38,6 +38,7 @@ const Skills = () => {
             text: '',
         },
     ];
+    
 
     const [skillItems, setSkillItems] = useState([]);
 
