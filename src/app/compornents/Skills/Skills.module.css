@@ -47,6 +47,7 @@
 .skills_box {
     height: 60vh;
     max-width: 100%;
+    margin-top: 2vh;
     /* background-color: ; .jsxのほうで指定 */
     position: relative;/*button用*/
 }
@@ -86,9 +87,9 @@
 
 .tooltip_box {
     padding: 0.3rem;
-    border: solid 1px #000;
+    /* border: solid 1px #000; */
     border-radius: 2px;
-    background-color: rgba(2,2,2, 0.7);
+    /* background-color: rgba(2,2,2, 0.7); */
     color: #fff;
     font-size:60%;
 }

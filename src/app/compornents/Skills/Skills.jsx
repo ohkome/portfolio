@@ -81,7 +81,7 @@ const Skills = () => {
             title: 'Adobe XD',
             top: '100%',
             left: '0',
-            ileft: '0',
+            ileft: '2%',
             mtop: '5Vmin',
             time: '0.5',
             text: '基本的な操作法を理解しています。デザインカンプを作ることができます',
