@@ -19,7 +19,8 @@
     line-height: 2.6;
     letter-spacing: 0.1em;
     
-    /* text-align: justify; */
+    text-align: justify;
+    /* text-wrap: balance; */
 }
 
 .content_title {

@@ -61,6 +61,7 @@ return (
                 <div className={styles.img_box}>
                     <Image
                     src='/portfolio-test.jpg'
+                    alt='me'
                     fill
                     className={styles.img}
                     />

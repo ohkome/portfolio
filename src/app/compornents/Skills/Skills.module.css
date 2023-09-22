@@ -1,17 +1,18 @@
 .skills {
-    width: min(1020px, 90%);
+    width: min(1020px, 100%);
     margin:0 auto;
     padding: clamp(0.6rem, 20Vmin, 10rem) clamp(0.3rem, 10Vmin, 5rem);
     letter-spacing: 0.1em;
     font-weight: bold;
     text-align: center;
+    user-select: none;/*文字の選択による着色をなくす*/
 }
 
 .intro {
     max-width: 58em;
-    margin-left: 20%;
+    margin: auto;
     padding-top: clamp(0.2rem, 6Vmin, 3rem);
-    text-align: center;
+    text-align: justify;
     font-size: 60%;
 }
 
@@ -25,8 +26,8 @@
 
 /* motion */
 .button {
-    width: 8em;
-    height: 8em;
+    width: 7em;
+    height: 7em;
     position: absolute;
     top:50%;
     left:50%;
@@ -35,7 +36,7 @@
     border-radius: 50%;
     font-weight: bold;
     cursor: pointer;
-    z-index: 1;/*文字が埋もれちゃうため、topとぇｆｔで表示位置を調整*/
+    z-index: 1;/*文字が埋もれちゃうため、topとleftで表示位置を調整*/
 }
 
 .button span {
@@ -44,19 +45,15 @@
 }
 
 .skills_box {
-    display: flex;
     height: 60vh;
     max-width: 100%;
-    background-color: antiquewhite;
-    justify-content: center;
-    align-items: center;
+    /* background-color: ; .jsxのほうで指定 */
     position: relative;/*button用*/
-   
 }
 
 .ul {
     animation: fadein 2s ease-in-out forwards;
-    background-color: aqua; 
+    /* colorは.jsxの方で管理 */
 }
 @keyframes fadein {
     0% {
@@ -69,11 +66,77 @@
     }
 }
 
-
-.ul:hover.li:hover{
-    opacity: 0.1;
+.tooltip {
+    display: inline;
+    opacity: 0;
+    animation: fade 2s ease-in-out forwards;
+    position: absolute;/* 位置調整用 */
+    /* top .jsxのmargin-topで管理 */
+    /* left: %; .jsxのileftで管理*/
+    text-align: justify;
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.li:hover{
+.tooltip_box {
+    padding: 0.3rem;
+    border: solid 1px #000;
+    border-radius: 2px;
+    background-color: rgba(2,2,2, 0.7);
+    color: #fff;
+    font-size:60%;
+}
+
+.item {
+    display: inline;
+}
+
+.item:hover{
     opacity: 0.2;
+}
+
+@media screen and (max-width: 700px) {
+    .button {
+        font-size: 80%;
+    }
+
+    .skills_box {
+        height: 70vh;
+    }
+
+    .tooltip {
+        padding: 0.1rem;
+        font-size: 1rem;
+    }
+    
+    .item {
+        font-size: 70%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .button {
+        display: none;
+        /* width: 6em;
+        height: 6em;
+        font-size: 70%; */
+    }
+    
+    .item {
+        font-size: 60%;
+    }
+}
+@media screen and (max-width: 340px) {
+    .skills_box {
+        height: 80vh;
+    }
+    
+    .item {
+        font-size: 40%;
+    }
 }

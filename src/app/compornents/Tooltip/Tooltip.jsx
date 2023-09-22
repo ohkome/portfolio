@@ -22,9 +22,15 @@ const Tooltip = (props) => {
     className={styles.container} 
     onMouseEnter={() => setShow(true)} 
     onMouseLeave={() => setShow(false)} 
+    onClick = {() => setShow(!show)}
+    style={{ position: 'relative' }} 
     >
+    {/* 子要素props.childrenをホバーした時setShowが実行 */}
     {props.children}
-    {show && <div className={styles.text} style={position}>{props.text}</div>}
+    {/* props.textはホバー時に表示したい内容を記載 ver1 */}
+    {/* {show && <div className={styles.text} style={position}>{props.text}</div>} */}
+    {/* ツールチップの表示条件を制御 ver2 */}
+    {show || props.showAll ? <div className={styles.text} style={position}>{props.text}</div> : null}
     </div>
     );
 };
