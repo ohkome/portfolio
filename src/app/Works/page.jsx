@@ -86,15 +86,24 @@ const page = () => {
     },
   ]
   return (
-    <section className={styles.topWorks}>
-      <SectionTitle 
-      enText="Works" 
-      jaText="作品"
-      enMainColor="#000"
-      jaColor="#ccc"
-      boxColor="#ccc"
-      className={styles.title}
-    />
+    <div className={styles.topWorks}>
+      <section className={styles.mainvisual}>
+        <BackgroundSlider />
+        <div className={styles.title_wrapper}>
+          <SectionTitle 
+            enText="Works" 
+            jaText="作品"
+            enMainColor="#000"
+            jaColor="#ccc"
+            boxColor="#ccc"
+            className={styles.title}
+          />
+        </div>
+        
+      </section>
+      
+
+      
 
     <ul className={styles.layout_grid}>
       {worksDesign.map((item,index) => {
@@ -114,7 +123,7 @@ const page = () => {
     </ul>
 
     <Tset />
-    </section>
+    </div>
   );
 
 }
