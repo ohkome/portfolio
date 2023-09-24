@@ -35,7 +35,6 @@ function Filter() {
 
     //タグが既に選択済みかを確認する
     const thisTag = e.currentTarget.id;
-    console.log(thisTag);
     const check = selectedTags.find((tag) => 
       tag === thisTag
     );
@@ -84,8 +83,8 @@ const closeModal = () => {
             key={index} 
             style={{ backgroundImage: `url(${item.src})`}}
             className={styles.grid_item}
-            onClick={() => openModal(item)} // モーダルを開く
           >
+            <div className={styles.modal_button} onClick={() => openModal(item)}>a</div>
             <div className={styles.tags_box}>
               {item.tags && item.tags.map((tagItem,tagIndex) => (
                 <button 
