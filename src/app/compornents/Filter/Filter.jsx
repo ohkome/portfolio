@@ -82,10 +82,39 @@ function Filter() {
     }
   }
 
-  //スタイル
+  // //スタイル
+  // // タグ選択時のスタイル変更
+  // const grigItem = (setSelectedTag, select) => {
+  //   // 選択したタグが既に選択済かチェック
+  //   const count = setSelectedTag.filter((selected) => select === selected);
+  //   // 選択していない場合はスタイルを追加
+  //   if (count.length !== 0) {
+  //     return css`
+  //       background-color: red;
+  //     `;
+  //   }
+  //   return null; // スタイルがない場合はnullを返す
+  // };
 
   return (
     <div>Filter
+      <button id='design' 
+      onClick={push}
+      style={{
+        backgroundColor: selectedTags.includes('design') ? 'red' : '',
+      }}
+      >
+        design
+      </button>
+      <button id='web' 
+      onClick={push}
+      style={{
+        backgroundColor: selectedTags.includes('web') ? 'red' : '',
+      }}
+      >
+        web
+      </button>
+
       <ul className={styles.layout_grid}>
         {selectedArticles.map((item, index) => (
           <li
@@ -98,6 +127,10 @@ function Filter() {
                 key={tagIndex}
                 id={tagItem}
                 onClick={push}//クリックした時にselectedタグに追加
+                style={{
+                  backgroundColor: selectedTags.includes(tagItem) ? 'red' : '',
+                }}
+                className={styles.button}
               >
                 {tagItem}
               </button>

@@ -1,18 +1,22 @@
 .layout_grid {
     max-width: 100Vmin;
-    height: calc(100Vmin * 2/3);
+    /* height: calc(100Vmin * 2/3); */
+    /* height: 100%; */
     margin: 5vh auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: calc(100Vmin * 2/3 * 1/3);
     grid-gap: 1rem;
     align-items: center;
 }
 
 .grid_item {
     width: 100%;
-    height: 100%;
+    height: calc(100Vmin * 2/9 );
     position: relative; /* image用 */
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .works_img {
@@ -37,6 +41,6 @@
         max-height: calc(70Vmin * 1.5);
         margin: 3vh auto;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr 1fr 1fr;
+        /* grid-template-rows: repeat(3, 1fr); */
     }
 }

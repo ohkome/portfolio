@@ -108,23 +108,6 @@ const page = () => {
       
 
       <Filter />
-
-    <ul className={styles.layout_grid}>
-      {worksDesign.map((item,index) => {
-        return(
-          <li key={index} className={styles.works_item}>
-            <Link href={item.href}>
-              <Image 
-              src={item.src} 
-              alt={item.alt} 
-              fill
-              className={styles.works_img}
-              />
-            </Link>
-          </li>
-        )
-      })}
-    </ul>
     </div>
   );
 
