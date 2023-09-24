@@ -181,6 +181,7 @@ const Skills = () => {
         },
     ];
 
+    //レスポンシブ用の処理
     useEffect(() => {
         const mediaQuery = window.matchMedia('(max-width: 700px)');
 
@@ -200,9 +201,6 @@ const Skills = () => {
             mediaQuery.removeEventListener('change', updateSelectedSkillsData);
         };
     }, []);
-
-    // const mediaQuery = window.matchMedia('(max-width: 700px)');
-    // const selectedSkillsData = mediaQuery.matche ? responsiveSkillsData : skillsData;
 
     const comment = () => {
         return(

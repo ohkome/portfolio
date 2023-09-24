@@ -10,6 +10,25 @@
     top: var(--top);
     left: var(--left);
     transform: var(--transform);
+    animation: popup 0.2s ease-in-out forwards;
+}
+@keyframes popup {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) 
+    }
+    30% {
+        opacity: 0.5;
+        transform: translateY(20px) 
+    } 
+    80% {
+        opacity: 1;
+        transform: translateY(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media screen and (max-width: 400px) {

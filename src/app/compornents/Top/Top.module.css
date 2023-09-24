@@ -9,11 +9,6 @@
     
 }
 
-.link:hover {
-    color: #666;
-    opacity: 0.5;
-}
-
 /* メインビジュアルのレイアウト */
 .mainvisual_wrap {
     /* height: 70Vmin; */
@@ -66,12 +61,17 @@
     line-height: 0;
 }
 
+link:hover .tooltip {
+    opacity: 1;
+}
+
 .icon {
     margin: 10px;
     animation: icon-up 2s forwards;
     animation-delay: 1.8s;
     opacity: 0;
 }
+
 @keyframes icon-up {
     0% {
         opacity: 0;

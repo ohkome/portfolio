@@ -1,0 +1,42 @@
+.layout_grid {
+    max-width: 100Vmin;
+    height: calc(100Vmin * 2/3);
+    margin: 5vh auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+}
+
+.grid_item {
+    width: 100%;
+    height: 100%;
+    position: relative; /* image用 */
+    background-size: cover;
+}
+
+.works_img {
+    max-width: 100%;
+    object-fit: contain;
+    /* object-position: left; */
+}
+
+@media screen and (max-width: 1025px) {
+    .layout_grid {
+        max-width: 70Vmin;
+        max-height: calc(70Vmin * 2/3);
+        margin: 5vh auto;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-gap: 5% 10%; */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .layout_grid {
+        max-width: 70Vmin;
+        max-height: calc(70Vmin * 1.5);
+        margin: 3vh auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}

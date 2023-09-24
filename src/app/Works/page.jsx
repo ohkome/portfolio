@@ -6,7 +6,7 @@ import styles from '../Works/Works.module.css'
 // コンポーネント
 import SectionTitle from '../compornents/SectionTitle/SectionTitle'
 import BackgroundSlider from '../compornents/BackgroundSlider/BackgroundSlider'
-import Tset from '../compornents/Contact/Tset'
+import Filter from '../compornents/Filter/Filter'
 const page = () => {
 
 
@@ -85,6 +85,10 @@ const page = () => {
       href: ''
     },
   ]
+
+  
+
+
   return (
     <div className={styles.topWorks}>
       <section className={styles.mainvisual}>
@@ -103,7 +107,7 @@ const page = () => {
       </section>
       
 
-      
+      <Filter />
 
     <ul className={styles.layout_grid}>
       {worksDesign.map((item,index) => {
@@ -121,8 +125,6 @@ const page = () => {
         )
       })}
     </ul>
-
-    <Tset />
     </div>
   );
 

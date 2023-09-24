@@ -19,7 +19,7 @@ const mainvisualLink = [
   {
     href: "#",
     src: "/resume-icon.png",
-    alt: "PDF resume",
+    alt: "PDF rortfolio",
   }
 ]
 
@@ -56,6 +56,7 @@ const Top = () => {
                   top='100%'
                   left='50%'
                   transform='translate(-50% -50%)'
+                  className={styles.Tooltip}
                   >
                   <Image 
                   src={item.src} 
