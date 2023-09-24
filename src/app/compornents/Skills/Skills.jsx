@@ -43,7 +43,7 @@ const Skills = () => {
         },
         {
             title: 'css',
-            top: '-100%',
+            top: '-120%',
             left: '110%',
             mtop: '55Vmin',
             ileft: '40%',

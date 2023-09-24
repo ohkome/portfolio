@@ -1,3 +1,29 @@
+/* 全体のレイアウト */
+.filter {
+    padding: clamp(0.6rem, 20Vmin, 10rem) clamp(0.3rem, 10Vmin, 5rem);
+}
+
+/* トップのボタン */
+.which {
+    border: none;
+    background-color: transparent;
+    padding-bottom: 2px;/*borderのズレ調整用*/
+    margin: 2% 2%;
+    font-size: 130%;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    vertical-align: top;
+
+    transition: 0.2s;
+}
+
+.which:hover {
+    padding-bottom: 0; /*borderのズレ調整用*/
+    border-bottom: solid 2px #000;
+}
+
+/* グリッド部分 */
 .layout_grid {
     max-width: 100Vmin;
     /* height: calc(100Vmin * 2/3); */
@@ -13,17 +39,50 @@
 .grid_item {
     width: 100%;
     height: calc(100Vmin * 2/9 );
-    position: relative; /* image用 */
+    filter: grayscale(90%);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
+    transition: 0.15s;
+
+    position: relative; /*image用*/
+    text-align: right; /*tags用*/
 }
 
-.works_img {
-    max-width: 100%;
-    object-fit: contain;
-    /* object-position: left; */
+.grid_item:hover {
+    filter: grayscale(0) contrast(110%);
 }
+
+.tags_box{
+    display: none;
+    width: 100%;
+    height: 10%;
+    padding: 1px;
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    bottom: 0;
+}
+
+.grid_item:hover .tags_box {
+    display: block;
+}
+
+.tags {
+    border: none;
+    background-color: transparent;
+    padding: 1px;
+    margin-left: 2%;
+
+    color: #fff;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.tags:hover {
+    color: #ccc;
+}
+
 
 @media screen and (max-width: 1025px) {
     .layout_grid {

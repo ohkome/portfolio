@@ -1,0 +1,56 @@
+.modalWrapper {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+}
+
+/* .layout {
+    width: 70%;
+    height: 70vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.article {
+    width: 70%;
+    height: 70vh;
+    /*垂直方向にスクロールできるようにする スクロールに反応するようにする*/
+    /* overflow-y: scroll; */
+    margin: 15vh auto;
+    background-color: #fff;
+}
+
+.top {
+    display: flex;
+    width: 100%;
+    height: 30vh;
+    align-items: bottom;/*下ぞろえにする*/
+    background-color: #ccc;
+    position: relative;/*image用*/
+}
+
+.img {
+    width: 50%;
+    object-fit: contain;
+}
+
+.topText {
+    width: 50%;
+}
+
+.dl {
+    display: flex;
+}
+
+
+.content_title::before {
+    content: '';
+    display: block;
+    width: 0.8em;
+    height: 0.8em;
+    background-color: #ccc;
+}

@@ -1,72 +1,37 @@
 import React, { useEffect, useState } from 'react'
+import Image from 'next/image';
 import styles from './Filter.module.css'
 import { articles } from './ArticleData'
+import Modal from '../Modal/Modal';
 
 function Filter() {
-  //選択されたタグ 記事はArtivlesで管理
-  // const tagsArray = [
-  //   'web',
-  //   'design',
-  // ]
-  
   //状態を管理、記事の初期値は全選択にする
   const [selectedTags, setSelectedTags] = useState([]);
   const [selectedArticles, setSelectedArticles] = useState(articles);
-
-  // useEffect(() => {
-  //   setSelectedArticles((prevItems) => {
-  //     //以下の工程の結果trueになったitemをnewItemsに格納していく
-  //     let newItems = prevItems.filter((item) => {
-  //       //item(articleの要素)が持っているtagsと選択されたtagが合致するかどうかを確認
-  //       let firstResult = selectedTags.every((tag) => {
-  //         let firstFind = item.tags.find((tagLists) => {
-  //           tagLists === tag;
-  //         });
-  //         return !!firstFind; //真偽地で返す
-  //       });
-
-  //       let secondResult = selectedTags.includes(item.witch);
-  //       //
-  //       // let secondResult = selectedTags.every((tag) => {
-  //       //   let secondFind = item.witch.find((tagLists) => {
-  //       //     tagLists === tag;
-  //       //   });
-  //       //   return !!secondFind;
-  //       // });
-
-  //       return firstResult || secondResult;
-  //       // return firstResult;
-  //     });
-  //     return newItems;//newItemsの結果をselectedArticlesに入れる
-      
-  //   });    
-  //   console.log(selectedTags);
-  //   console.log(selectedArticles);
-
-  //   return () => {
-  //     setSelectedArticles(articles)//選択状態を初期化
-  //   };
-  // },[selectedTags])
+  // モーダル用のステート
+  const [selectedModalItem, setSelectedModalItem] = useState(null); 
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
+     //以下の工程の結果trueになったitemをnewItemsに格納していく
     let newItems = articles.filter((item) => {
+      //item(articleの要素)が持っているtagsと選択されたtagが合致するかどうかを確認
       let firstResult = selectedTags.every((tag) => {
         let firstFind = item.tags.find((tagLists) => tagLists === tag);
         return !!firstFind;
       });
 
-      let secondResult = selectedTags.includes(item.witch);
+      let secondResult = selectedTags.includes(item.which);
 
       return firstResult || secondResult;
     });
 
-    setSelectedArticles(newItems);
+    setSelectedArticles(newItems);//newItemsの結果をselectedArticlesに入れる
   }, [selectedTags]);
 
   //クリック時の動作
   const push = (e) => {
     e.preventDefault();
-    
 
     //タグが既に選択済みかを確認する
     const thisTag = e.currentTarget.id;
@@ -82,35 +47,33 @@ function Filter() {
     }
   }
 
-  // //スタイル
-  // // タグ選択時のスタイル変更
-  // const grigItem = (setSelectedTag, select) => {
-  //   // 選択したタグが既に選択済かチェック
-  //   const count = setSelectedTag.filter((selected) => select === selected);
-  //   // 選択していない場合はスタイルを追加
-  //   if (count.length !== 0) {
-  //     return css`
-  //       background-color: red;
-  //     `;
-  //   }
-  //   return null; // スタイルがない場合はnullを返す
-  // };
+// モーダルを開く関数
+const openModal = (item) => {
+  setSelectedModalItem(item);
+  setShow(true);
+};
+
+const closeModal = () => {
+  setShow(false); // モーダルを閉じる
+};
 
   return (
-    <div>Filter
+    <div className={styles.filter}>
       <button id='design' 
       onClick={push}
       style={{
-        backgroundColor: selectedTags.includes('design') ? 'red' : '',
+        borderBottom: selectedTags.includes('design') ? 'solid 2px #000' : '',
       }}
+      className={styles.which}
       >
         design
       </button>
       <button id='web' 
       onClick={push}
       style={{
-        backgroundColor: selectedTags.includes('web') ? 'red' : '',
+        borderBottom: selectedTags.includes('web') ? 'solid 2px #000' : '',
       }}
+      className={styles.which}
       >
         web
       </button>
@@ -121,23 +84,43 @@ function Filter() {
             key={index} 
             style={{ backgroundImage: `url(${item.src})`}}
             className={styles.grid_item}
+            onClick={() => openModal(item)} // モーダルを開く
           >
-            {item.tags && item.tags.map((tagItem,tagIndex) => (
-              <button 
-                key={tagIndex}
-                id={tagItem}
-                onClick={push}//クリックした時にselectedタグに追加
-                style={{
-                  backgroundColor: selectedTags.includes(tagItem) ? 'red' : '',
-                }}
-                className={styles.button}
-              >
-                {tagItem}
-              </button>
-            ))}
+            <div className={styles.tags_box}>
+              {item.tags && item.tags.map((tagItem,tagIndex) => (
+                <button 
+                  key={tagIndex}
+                  id={tagItem}
+                  onClick={push}//クリックした時にselectedタグに追加
+                  style={{
+                    color: selectedTags.includes(tagItem) ? 'red' : '',
+                  }}
+                  className={styles.tags}
+                >
+                  {tagItem}
+                </button>
+              ))}
+            </div>
+            
           </li>
         ))}
+
       </ul>
+
+        {/* モーダルコンポーネント */}
+      {selectedModalItem && show && (
+        <Modal
+          src={selectedModalItem.src}
+          title={selectedModalItem.title}
+          field={selectedModalItem.field}
+          time={selectedModalItem.time}
+          url={selectedModalItem.url}
+          concept={selectedModalItem.concept}
+          point={selectedModalItem.point}
+          closeModal={closeModal}
+        />
+      )}
+
     </div>
   )
 }
