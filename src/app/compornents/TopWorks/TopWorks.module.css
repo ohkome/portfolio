@@ -28,21 +28,6 @@
     flex-direction: column;
 }
 
-/* .itemWrapper {
-    display: flex;
-    justify-content: space-between
-}
-
-.item {
-    width: 45%;
-}
-
-.title {
-    text-align: center;
-    margin-bottom: 1rem;
-} */
-/* 
-
 /* リンク */
 .btn {
     position: absolute;
@@ -56,12 +41,12 @@
     width: 8em;/*レスポンシブ*/
     margin: clamp(0.6rem, 4Vmin, 10rem) auto 0;
     padding: clamp(0.1rem, 0.3Vmin, 1rem) 0.2rem;
-    border-bottom: 2px solid #000;
-    border-right: 2px solid #000;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
     justify-content: center;
     align-items: center;
     transform: skew(30deg);
-    color: #555;
+    color: #fff;
     /* position: relative;before用 */
 
 }
@@ -70,8 +55,8 @@
     content: '';
     display: block;
     width: 95%;
-    border-bottom: 1.2px solid #000;
-    border-right: 1.2px solid #000;
+    border-bottom: 1.2px solid #fff;
+    border-right: 1.2px solid #fff;
     position: absolute;
     top: 90%;
     transition: 0.2s;
@@ -85,33 +70,11 @@
     content: '';
     display: block;
     width: 95%;
-    border-bottom: 1.2px solid #000;
-    border-right: 1.2px solid #000;
+    border-bottom: 1.2px solid #fff;
+    border-right: 1.2px solid #fff;
     position: absolute;
     top: 100%;
 }
-
-/* 
-@media screen and (max-width:900px){
-    .item {
-        max-width: 70%;
-    }
-}
-
-@media screen and (max-width:700px) {
-    .item {
-        width: 100%;
-        flex-direction: column;
-    }
-    
-    .item:last-child {
-        flex-direction: column-reverse;
-    }
-    
-    .text {
-        width: 100%;;
-    }
-} */
 
 @media screen and (max-width:520px) {
     .btnLayout {

@@ -60,7 +60,7 @@ return (
             <div className={styles.profile_layout}>
                 <div className={styles.img_box}>
                     <Image
-                    src='/portfolio-test.jpg'
+                    src='/profile.jpg'
                     alt='me'
                     fill
                     className={styles.img}

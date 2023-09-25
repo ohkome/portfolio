@@ -19,6 +19,7 @@ const mainvisualLink = [
   {
     href: "#",
     src: "/resume-icon.png",
+    href:"/portfolio.pdf",
     alt: "PDF rortfolio",
   }
 ]
@@ -58,13 +59,16 @@ const Top = () => {
                   transform='translate(-50% -50%)'
                   className={styles.Tooltip}
                   >
-                  <Image 
-                  src={item.src} 
-                  alt={item.alt} 
-                  width={30} 
-                  height={30} 
-                  className={styles.icon} 
-                  />
+                    <Link href={item.href}>
+                      <Image 
+                      src={item.src} 
+                      alt={item.alt} 
+                      width={30} 
+                      height={30} 
+                      className={styles.icon} 
+                      />
+                    </Link>
+                  
                   </Tooltip>
                 </Link>
               );
