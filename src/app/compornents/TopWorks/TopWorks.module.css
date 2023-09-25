@@ -1,70 +1,97 @@
 .topWorks {
-    padding-top: 10vh;
-    padding-bottom: 20vh;
+    width: min(1020px, 90%);
+    margin: 10vh auto;
+    /* padding-bottom: 20vh; */
     /* background-color: aliceblue; */
-    text-align: center;
+    /* text-align: left; */
 }
 
-.item {
-    width: min(70%, 900px);
-    margin: clamp(0.6rem, 20Vmin, 10rem) auto;
-    /* padding-bottom: 1rem; */
-    padding: 1rem clamp(0.6rem, 3Vmin, 10rem);
-    border-bottom: solid 1px #ccc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
+.mainvisual {
+    height: 80Vmin;
+    margin-bottom: 10vh;
+    position: relative;/* btn wrapper用 */
 }
 
-.text {
+.titleWrapper {
     width: 50%;
-    margin: auto;
-    padding: 1rem;
-}
-
-.text_content {
-    margin-top: 2rem;
-}
-
-/* リンク */
-.btn_layout {
-    margin-top: clamp(0.6rem, 4Vmin, 10rem);
+    height: 50%;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(5, 5, 5, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
+/* .itemWrapper {
+    display: flex;
+    justify-content: space-between
+}
+
+.item {
+    width: 45%;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 1rem;
+} */
+/* 
+
+/* リンク */
 .btn {
-    padding-right: 0.8em;
-    position: relative;
-}
-
-.btn::before {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 1.6em;
-    background-color: #000;
-
     position: absolute;
-    bottom: -1px;
-    left: 100%;
-    transform: rotate(-30deg);
+    top: 60Vmin;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.btn::after {
+.btnLayout {
+    display: flex;
+    width: 8em;/*レスポンシブ*/
+    margin: clamp(0.6rem, 4Vmin, 10rem) auto 0;
+    padding: clamp(0.1rem, 0.3Vmin, 1rem) 0.2rem;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+    justify-content: center;
+    align-items: center;
+    transform: skew(30deg);
+    color: #555;
+    /* position: relative;before用 */
+
+}
+
+.btnLayout::before {
     content: '';
     display: block;
-    width: 7em;
-    height: 1px;
-    background-color: #000;
+    width: 95%;
+    border-bottom: 1.2px solid #000;
+    border-right: 1.2px solid #000;
+    position: absolute;
+    top: 90%;
+    transition: 0.2s;
+}
 
+.btnText {
+    transform: skew(-30deg);
+}
+
+.btnLayout:hover::before {
+    content: '';
+    display: block;
+    width: 95%;
+    border-bottom: 1.2px solid #000;
+    border-right: 1.2px solid #000;
     position: absolute;
     top: 100%;
-    left: 0;
 }
 
+/* 
 @media screen and (max-width:900px){
     .item {
         max-width: 70%;
@@ -83,5 +110,15 @@
     
     .text {
         width: 100%;;
+    }
+} */
+
+@media screen and (max-width:520px) {
+    .btnLayout {
+        font-size: 70%;
+        font-weight: bold;
+        width: 8em;/*レスポンシブ*/
+        border-bottom: 1px solid #000;
+        border-right: 1px solid #000;
     }
 }

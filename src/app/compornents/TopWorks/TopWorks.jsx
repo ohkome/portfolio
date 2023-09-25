@@ -10,45 +10,38 @@ const TopWorks = () => {
 
   return (
     <section className={styles.topWorks}>
-      <SectionTitle 
-      enText="Works" 
-      jaText="作品"
-      enMainColor="#000"
-      jaColor="#ccc"
-      boxColor="#ccc"
-      />
-
-      <ul>
-        <li className={styles.item}>
-          <Image 
-          src='/english.jpg'
-          alt='オンライン英会話のバナー'
-          width={240}
-          height={200}
+      <div className={styles.mainvisual}>
+        <BackgroundSlider />
+        <div className={styles.titleWrapper}>
+          <SectionTitle 
+            enText="Works" 
+            jaText="作品"
+            enMainColor="#000"
+            jaColor="#ccc"
+            boxColor="#ccc"
+            className={styles.title}
           />
-          <div className={styles.text}>
-            <h3>Design</h3>
-            <p className={styles.text_content}>何を伝えたいか、デザインを通してどのようなアクションをして欲しいか、目的や優先順位を確認しながらデザインを考えています。</p>
-          </div>
-        </li>
-
-        <li className={styles.item}>
-          <div className={styles.text}>
-            <h3>Web</h3>
-            <p className={styles.text_content}>他人が見た時にどういう意図でコーディングしているのかがわるように、見やすいコードを意識して制作しています。</p>
-          </div>
-          <Image 
-          src='/himawari.png'
-          alt='高齢者住宅紹介会社のLP'
-          width={300}
-          height={200}
-          />
-        </li>
-      </ul>
-
-      <Link href='/Works' className={styles.btn_layout}>
-        <span className={styles.btn}> Works Page</span>
-      </Link>
+        </div>
+        <div className={styles.btn}>
+          <Link href='/Works' className={styles.btnLayout}>
+            <span className={styles.btnText}> Works Page</span>
+          </Link> 
+        </div>
+        
+      </div>
+        {/* <ul className={styles.itemWrapper}>
+          <li className={styles.item}>
+            <h3 className={styles.title}>Design</h3>
+            <p className={styles.text}>何を伝えたいか、デザインを通してどのようなアクションをして欲しいか、目的や優先順位を確認しながらデザインを考えています。</p>
+          </li>
+          <li className={styles.item}>
+            <h3 className={styles.title}>Web</h3>
+            <p className={styles.text}>他人が見た時にどういう意図でコーディングしているのかがわるように、見やすいコードを意識して制作しています。</p>
+          </li>
+        </ul> */}
+        
+        
+      
     </section>
   );
 };

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './Filter.module.css'
 import { articles } from './ArticleData'
 import Modal from '../Modal/Modal';
+import SectionTitle from '../SectionTitle/SectionTitle';
 
 function Filter() {
   //状態を管理、記事の初期値は全選択にする
@@ -58,6 +59,14 @@ const closeModal = () => {
 
   return (
     <div className={styles.filter}>
+      <SectionTitle 
+            enText="Works" 
+            jaText="作品"
+            enMainColor="#000"
+            jaColor="#ccc"
+            boxColor="#ccc"
+            className={styles.title}
+      />
       <button id='design' 
       onClick={push}
       style={{
@@ -84,7 +93,7 @@ const closeModal = () => {
             style={{ backgroundImage: `url(${item.src})`}}
             className={styles.grid_item}
           >
-            <div className={styles.modal_button} onClick={() => openModal(item)}>a</div>
+            <div className={styles.modal_button} onClick={() => openModal(item)}></div>
             <div className={styles.tags_box}>
               {item.tags && item.tags.map((tagItem,tagIndex) => (
                 <button 

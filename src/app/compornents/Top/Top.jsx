@@ -30,7 +30,7 @@ const Top = () => {
       <div className={styles.mainvisual_wrap}>
         <div className={styles.img_box}>
           <Image 
-          src='/portfolio-test.jpg' 
+          src='/top.jpg' 
           alt='me'
           // width={1000}
           // height={600}

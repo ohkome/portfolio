@@ -1,6 +1,7 @@
 /* 全体のレイアウト */
 .filter {
-    padding: clamp(0.6rem, 20Vmin, 10rem) clamp(0.3rem, 10Vmin, 5rem);
+    width: min(1020px, 90%);
+    margin: 10vh auto;
 }
 
 /* トップのボタン */
