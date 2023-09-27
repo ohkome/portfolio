@@ -23,8 +23,9 @@
 .article {
     width: 70%;
     height: 70vh;
-    /*垂直方向にスクロールできるようにする スクロールに反応するようにする*/
-    /* overflow-y: scroll; */
+    /* 垂直方向にスクロールできるようにする スクロールに反応するようにする */
+    overflow-y: scroll;
+    overflow-x: hidden;
     margin: 15vh auto;
     background-color: #fff;
     
@@ -37,7 +38,8 @@
     justify-content: space-between;
     /* align-items: bottom;下ぞろえにする */
     background-color: #ccc;
-    
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .imgBox {
