@@ -1,7 +1,153 @@
-.topWorks {
+/* 全体のレイアウト */
+.works {
     width: min(1020px, 90%);
     margin: 10vh auto;
-    /* padding-top: 10vh; */
-    padding-bottom: 5vh;
-    /* text-align: center;タイトル */
+    padding-bottom: 15vh;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* トップのボタン */
+.which {
+    border: none;
+    background-color: transparent;
+    padding-bottom: 2px;/*borderのズレ調整用*/
+    margin: 2% 2%;
+    font-size: 130%;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    vertical-align: top;
+
+    transition: 0.2s;
+}
+
+.which:hover {
+    padding-bottom: 0; /*borderのズレ調整用*/
+    border-bottom: solid 2px #000;
+}
+
+/* グリッド部分 */
+.layout_grid {
+    max-width: 100Vmin;
+    /* height: calc(100Vmin * 2/3); */
+    /* height: 100%; */
+    margin: 5vh auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* レスポンシブ */
+    grid-template-rows: calc(100Vmin * 2/3 * 1/3);
+    grid-gap: 2rem;
+    align-items: center;
+}
+
+.grid_item {
+    width: 100%;
+    height: calc(100Vmin * 2/9 );
+    filter: grayscale(90%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.15s;
+    text-align: right; 
+} 
+
+.grid_item:hover {
+    filter: grayscale(0) contrast(110%);
+} 
+
+.modal_button {
+    width: 100%;
+    height: calc((100Vmin * 2/9) - 10%);
+    position: absolute;
+    top: 0;
+    /* background-color: aqua; */
+    z-index: 5;
+}
+
+.tags_box{
+    display: none;
+    width: 100%;
+    height: 10%; /* レスポンシブ */
+    padding: 2px;
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    top: 100%;
+    z-index: 10;
+}
+
+.grid_item:hover .tags_box {
+    display: block;
+}
+
+.tags {
+    border: none;
+    background-color: transparent;
+    padding: 1px;
+    margin-left: 2%;
+
+    color: #fff;
+    cursor: pointer;
+    vertical-align: top; /* レスポンシブ */
+}
+
+.tags:hover {
+    color: #ccc;
+}
+
+
+@media screen and (max-width: 1025px) {
+    .layout_grid {
+        max-width: 70Vmin;
+        max-height: calc(70Vmin * 2/3);
+        margin: 5vh auto;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-gap: 5% 10%; */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .layout_grid {
+        max-width: 70Vmin;
+        max-height: calc(70Vmin * 1.5);
+        margin: 3vh auto;
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-rows: repeat(3, 1fr); */
+    }
+
+    .tags_box {
+        height: 25%;
+    }
+
+    .tags {
+        vertical-align: middle;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .button {
+        font-size: 80%;
+    }
+
+    .layout_grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: calc(100Vmin * 2/3 * 2/3);
+    }
+
+    .grid_item {
+        height: calc(100Vmin * 2/3 * 2/3);
+    }
+
+    .tags_box {
+        height: 15%;
+    }
 }
