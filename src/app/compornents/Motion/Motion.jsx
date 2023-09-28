@@ -31,7 +31,7 @@ const Motion = (props) => {
     return (
     <div>
         <div
-            ref={elementRef}
+            ref={elementRef} //ref属性を追加し、elementRefをhtml要素に関連づける
         >
             {props.trigger}
         </div>
