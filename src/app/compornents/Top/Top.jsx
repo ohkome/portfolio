@@ -11,7 +11,7 @@ import Title from '../Title/Title';
 import Tooltip from '../Tooltip/Tooltip';
 
 const mainvisualLink = [
-  // {
+  // {ギットハブ
   //   href: "#",
   //   src: "/github-icon.png",
   //   alt: "Github",
@@ -46,12 +46,12 @@ const Top = () => {
             intro='Hi! I am Minori Komeichi.' 
             message='Welcome to My Portfolio Website.'
           />
-          <div className={styles.icon_box}>
-            {mainvisualLink.map((item) =>{
+          <ul className={styles.icon_box}>
+            {mainvisualLink.map((item, index) =>{
               return(
-                <Link key={item.alt} href={item.href} 
-                className={styles.link} 
-                >
+                <li 
+                className={styles.link}
+                key={index}>
                   <Tooltip 
                   text={item.alt}
                   top='100%'
@@ -59,7 +59,10 @@ const Top = () => {
                   transform='translate(-50% -50%)'
                   className={styles.Tooltip}
                   >
-                    <Link href={item.href}>
+                    <Link 
+                    href={item.href}
+                    
+                    >
                       <Image 
                       src={item.src} 
                       alt={item.alt} 
@@ -70,10 +73,10 @@ const Top = () => {
                     </Link>
                   
                   </Tooltip>
-                </Link>
+                </li>
               );
             })}
-            </div>
+            </ul>
         </div>
 
         <div className={styles.scrolldown}>

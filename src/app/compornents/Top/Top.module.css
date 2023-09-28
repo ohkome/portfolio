@@ -6,7 +6,7 @@
 
 .link {
     display: inline-block;
-    
+    cursor: pointer;
 }
 
 /* メインビジュアルのレイアウト */
@@ -59,10 +59,6 @@
 .icon_box {
     display: inline-block;
     line-height: 0;
-}
-
-link:hover .tooltip {
-    opacity: 1;
 }
 
 .icon {
