@@ -19,6 +19,8 @@
     cursor: pointer;
 }
 
+/* スクロールバー */
+
 /* 本体 */
 .article {
     width: 70%;
@@ -28,7 +30,12 @@
     overflow-x: hidden;
     margin: 15vh auto;
     background-color: #fff;
-    
+}
+
+.article::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;/*IE,Edge用*/
+    scrollbar-width: none;/*FireFox用*/
 }
 
 .top {
@@ -38,8 +45,6 @@
     justify-content: space-between;
     /* align-items: bottom;下ぞろえにする */
     background-color: #ccc;
-    overflow-y: auto;
-    overflow-x: hidden;
 }
 
 .imgBox {
