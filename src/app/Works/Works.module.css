@@ -78,7 +78,7 @@
 .tags_box{
     display: none;
     width: 100%;
-    height: 10%; /* レスポンシブ */
+    height: 12%; /* レスポンシブ */
     padding: 2px;
     background-color: rgba(0,0,0,0.6);
     position: absolute;
@@ -127,6 +127,7 @@
 
     .tags_box {
         height: 25%;
+        padding-bottom: 5%;
     }
 
     .tags {

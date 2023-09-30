@@ -49,6 +49,7 @@ import styles from './Modal.module.css';
 import Link from 'next/link';
 
 const Modal = (props) => {
+    // モーダル開閉の関数は本体に記載
 
     return (
         <div className={styles.modalWrapper} onClick={props.closeModal}>

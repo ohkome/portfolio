@@ -17,9 +17,8 @@
     right: 15%;
     background-color: rgba(250, 250, 250, 0.5);
     cursor: pointer;
+    z-index: 10;
 }
-
-/* スクロールバー */
 
 /* 本体 */
 .article {
@@ -42,6 +41,7 @@
     display: flex;
     width: 100%;
     height: 30vh;
+    padding: 1Vmin;
     justify-content: space-between;
     /* align-items: bottom;下ぞろえにする */
     background-color: #ccc;
@@ -54,7 +54,6 @@
 
 .img {
     width: 100%;
-    /* object-fit: contain; */
     object-fit: contain;
 }
 
@@ -62,7 +61,6 @@
     width: 60%;
     padding: 5Vmin 1Vmin;
     font-size: 80%;
-
 }
 
 .topTitle {
@@ -80,12 +78,14 @@
 
 .dd {
     width: calc(100% - 5em);
-    text-wrap: balance;
+    margin-left: 0.2em;
 }
 
 .link {
+    max-width: 100%;
     border-bottom: solid 1px #555;
     font-size: 60%;
+    text-wrap: balance;
 }
 
 .content {
@@ -100,16 +100,56 @@
 .contentTitle::before {
     content: '■';
     color: #ccc;
-    /* display: block;
-    width: 0.6em;
-    height: 0.6em;
-    background-color: #ccc;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%); */
 }
 
 .li::before {
     content: '・';
+}
+
+@media screen and (max-width: 1000px) {
+    .top {
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 0;
+        background-color: #fff;
+    }
+
+    .imgBox {
+        width: 100%;
+        height: calc(100vw * 1/2);
+    }
+    
+    .topText {
+        width: 100%;
+        padding: 1Vmin 1px 0;
+    }
+    
+    .topTitle {
+        font-size: 90%;
+    }
+    
+    .dl {
+        flex-direction: column;
+    }
+
+    .dt {
+        font-size: 90%;
+        font-weight: bold;
+    }
+    
+    .dt::before {
+        content: '■';
+        color: #ccc
+    }
+    
+    .dd {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .article {
+        font-size: 60%;
+        line-height: 1.9;
+    }
 }
