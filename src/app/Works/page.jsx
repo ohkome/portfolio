@@ -4,6 +4,7 @@ import styles from './Works.module.css'
 import { articles } from './ArticleData'
 import Modal from '../compornents/Modal/Modal'
 import SectionTitle from '../compornents/SectionTitle/SectionTitle'
+import Tooltip from '../compornents/Tooltip/Tooltip'
 
 function Filter() {
   //状態を管理、記事の初期値は全選択にする
@@ -72,22 +73,23 @@ const closeModal = () => {
       
       <div className={styles.button}>
         <button id='design' 
-        onClick={push}
-        style={{
-          borderBottom: selectedTags.includes('design') ? 'solid 2px #000' : '',
-        }}
-        className={styles.which}
+          onClick={push}
+          style={{
+            borderLeft: selectedTags.includes('design') ? 'solid 5px #ccc' : '',
+          }}
+          className={styles.which}
         >
-        design
+          design
         </button>
+        
         <button id='web' 
-        onClick={push}
-        style={{
-          borderBottom: selectedTags.includes('web') ? 'solid 2px #000' : '',
-        }}
-        className={styles.which}
+          onClick={push}
+          style={{
+            borderLeft: selectedTags.includes('web') ? 'solid 5px #ccc' : '',
+          }}
+          className={styles.which}
         >
-          web
+        web
         </button>
       </div>
       

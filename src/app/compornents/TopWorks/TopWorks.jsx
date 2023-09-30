@@ -29,19 +29,6 @@ const TopWorks = () => {
         </div>
         
       </div>
-        {/* <ul className={styles.itemWrapper}>
-          <li className={styles.item}>
-            <h3 className={styles.title}>Design</h3>
-            <p className={styles.text}>何を伝えたいか、デザインを通してどのようなアクションをして欲しいか、目的や優先順位を確認しながらデザインを考えています。</p>
-          </li>
-          <li className={styles.item}>
-            <h3 className={styles.title}>Web</h3>
-            <p className={styles.text}>他人が見た時にどういう意図でコーディングしているのかがわるように、見やすいコードを意識して制作しています。</p>
-          </li>
-        </ul> */}
-        
-        
-      
     </section>
   );
 };
