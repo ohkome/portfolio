@@ -92,6 +92,19 @@ const closeModal = () => {
         web
         </button>
       </div>
+
+      <ul className={styles.selected_tags_list}>
+          {selectedTags.map((item, index) => (
+            <li 
+            key={index}
+            onClick={push}
+            id={item}
+            className={styles.selected_tags_item}
+            >
+              {item}
+            </li>
+          ))}
+      </ul>
       
 
       <ul className={styles.layout_grid}>

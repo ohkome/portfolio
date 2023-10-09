@@ -34,7 +34,24 @@
 }
 
 .which:hover {
-    border-left: solid 5px #ccc;
+    /* border-left: solid 5px #ccc; */
+    color: #ccc;
+}
+
+/* 選択済みタグリスト */
+.selected_tags_list {
+    display: flex;
+    width: min(600px, 60%);
+    margin: 1rem auto;
+}
+
+.selected_tags_item {
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.selected_tags_item:hover {
+    color: #ccc;
 }
 
 /* グリッド部分 */
